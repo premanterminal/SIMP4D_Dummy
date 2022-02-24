@@ -1,0 +1,5 @@
+- Fix desimal pembayaran angsuran pada modul SSPD
+- Fix Form Cetak Blanko Nota SKPD
+- Fitur cek Masa Pajak pada saat input SPTPD. Tidak bisa input jika masa pajak melewati tanggal hari ini
+- Fixed pembulatan angka pada modul Laporan Keuangan
+- Fitur cek Tanggal SPT pada saat input SPTPD. Tidak bisa input jika tanggal melewati tanggal hari ini
