@@ -1,0 +1,8 @@
+output.. = bin/
+bin.includes = plugin.xml,\
+               META-INF/,\
+               .,\
+               icons/,\
+               img/,\
+               plugin_customization.ini
+source.. = src/

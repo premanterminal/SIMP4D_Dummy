@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.1.v20110905 Build &lt;3.7.1.v20110905-1820></property>
+    <property name="units">in</property>
+    <method name="onPrepare"><![CDATA[varn = reportContext.getAppContext().get("Variable");
+vars["nomor"] = varn.get("nomor");
+vars["namaPajak"] = varn.get("namaPajak");
+vars["point6"] = varn.get("point6");
+vars["point8"] = varn.get("point8");
+vars["Menetapkan"] = varn.get("Menetapkan");
+vars["penandatangan"] = varn.get("penandatangan");
+vars["jabatan"] = varn.get("jabatan");
+vars["Kepala"] = varn.get("Kepala");
+vars["nip"] = varn.get("nip");]]></method>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">us-legal</property>
+            <property name="topMargin">2.25in</property>
+            <property name="leftMargin">0.3in</property>
+            <property name="rightMargin">0.3in</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="7">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">SURAT KEPUTUSAN</text-property>
+        </label>
+        <label id="8">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">KEPALA BADAN PENGELOLA PAJAK DAN RETRIBUSI DAERAH KOTA MEDAN</text-property>
+        </label>
+        <data id="10">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">nomor</property>
+                    <text-property name="displayName">nomor</text-property>
+                    <expression name="expression" type="javascript">vars["nomor"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">nomor</property>
+        </data>
+        <label id="11">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">TENTANG</text-property>
+        </label>
+        <label id="13">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">SURAT KETETAPAN PAJAK DAERAH KURANG BAYAR (SKPDKB)</text-property>
+        </label>
+        <data id="15">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="paddingBottom">5pt</property>
+            <property name="textAlign">center</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">namaPajak</property>
+                    <text-property name="displayName">namaPajak</text-property>
+                    <expression name="expression" type="javascript">vars["namaPajak"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">namaPajak</property>
+        </data>
+        <label id="16">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">12pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="paddingBottom">10pt</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">KEPALA BADAN PENGELOLA PAJAK DAN RETRIBUSI DAERAH KOTA MEDAN</text-property>
+        </label>
+        <grid id="17">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="height">7.072916666666667in</property>
+            <property name="width">7.791666666666667in</property>
+            <column id="18">
+                <property name="width">1.0833333333333333in</property>
+            </column>
+            <column id="19">
+                <property name="width">0.23958333333333334in</property>
+            </column>
+            <column id="20">
+                <property name="width">0.2604166666666667in</property>
+            </column>
+            <column id="21">
+                <property name="width">6.208333333333333in</property>
+            </column>
+            <row id="22">
+                <cell id="23">
+                    <label id="62">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Menimbang</text-property>
+                    </label>
+                </cell>
+                <cell id="24">
+                    <label id="63">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="25">
+                    <label id="64">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">a. </text-property>
+                    </label>
+                </cell>
+                <cell id="26">
+                    <text id="65">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="textAlign">justify</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Dalam rangka upaya pencapaian penerimaan Pajak Daerah sesuai hasil pendataan, pemeriksaaan terhadap Wajib Pajak berdasarkan prosedur dan ketentuan yang berlaku maka perlu ditetapkan besaran pajak, masa pajak dan sanksi administrasi.]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="27">
+                <cell id="28"/>
+                <cell id="29"/>
+                <cell id="30">
+                    <label id="66">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="paddingBottom">15pt</property>
+                        <text-property name="text">b.</text-property>
+                    </label>
+                </cell>
+                <cell id="31">
+                    <text id="67">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Untuk pelaksanaan hal tersebut perlu dituangkan dalam satu Surat Keputusan.]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="32">
+                <cell id="33">
+                    <label id="68">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Mengingat</text-property>
+                    </label>
+                </cell>
+                <cell id="34">
+                    <label id="69">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="35">
+                    <label id="70">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">1.</text-property>
+                    </label>
+                </cell>
+                <cell id="36">
+                    <text id="71">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Undang-Undang Nomor 32 Tahun 2004 tentang Pemerintah Daerah;]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="37">
+                <cell id="38"/>
+                <cell id="39"/>
+                <cell id="40">
+                    <label id="74">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">2.</text-property>
+                    </label>
+                </cell>
+                <cell id="41">
+                    <text id="75">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Undang-Undang Nomor 28 Tahun 2009 tentang Pajak dan Retribusi Daerah;]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="42">
+                <cell id="43"/>
+                <cell id="44"/>
+                <cell id="45">
+                    <label id="76">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">3.</text-property>
+                    </label>
+                </cell>
+                <cell id="46">
+                    <text id="77">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Peraturan Pemerintah Nomor 65 Tahun 2001 tentang Pajak Daerah;]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="47">
+                <cell id="48"/>
+                <cell id="49"/>
+                <cell id="50">
+                    <label id="79">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">4.</text-property>
+                    </label>
+                </cell>
+                <cell id="51">
+                    <text id="78">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Surat Keputusan Menteri Dalam Negeri Nomor 43 Tahun 1999 tentang Sistem dan Prosedur Administrasi Pajak Daerah, Retribusi Daerah dan Penerimaan Pendapatan lain-lain;]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="52">
+                <cell id="53"/>
+                <cell id="54"/>
+                <cell id="55">
+                    <label id="80">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">5.</text-property>
+                    </label>
+                </cell>
+                <cell id="56">
+                    <data id="94">
+                        <property name="fontSize">11pt</property>
+                        <property name="textAlign">justify</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">point6</property>
+                                <text-property name="displayName">point6</text-property>
+                                <expression name="expression" type="javascript">vars["point6"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">point6</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="57">
+                <cell id="58"/>
+                <cell id="59"/>
+                <cell id="60">
+                    <label id="92">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">6.</text-property>
+                    </label>
+                </cell>
+                <cell id="61">
+                    <text id="81">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Peraturan Daerah Kota Medan Nomor 15 Tahun 2016 tentang Pembentukan Perangkat Daerah Kota Medan;]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="82">
+                <cell id="83"/>
+                <cell id="84"/>
+                <cell id="85">
+                    <label id="95">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">7.</text-property>
+                    </label>
+                </cell>
+                <cell id="86">
+                    <data id="98">
+                        <property name="fontSize">11pt</property>
+                        <property name="textAlign">justify</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">point8</property>
+                                <text-property name="displayName">point8</text-property>
+                                <expression name="expression" type="javascript">vars["point8"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">point8</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="87">
+                <property name="height">0.4375in</property>
+                <cell id="88"/>
+                <cell id="89"/>
+                <cell id="90">
+                    <label id="97">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">8.</text-property>
+                    </label>
+                </cell>
+                <cell id="91">
+                    <text id="99">
+                        <property name="fontSize">11pt</property>
+                        <property name="textAlign">justify</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Peraturan Walikota Medan Nomor 1 Tahun 2017 tentang Kedudukan, Susunan Organisasi, Tugas dan Fungsi dan Tata Kerja Perangkat Daerah;]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="101">
+                <property name="height">0.4479166666666667in</property>
+                <cell id="102">
+                    <property name="colSpan">4</property>
+                    <property name="rowSpan">1</property>
+                    <label id="100">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">M E M U T U S K A N :</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="106">
+                <cell id="107">
+                    <label id="131">
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Menetapkan</text-property>
+                    </label>
+                </cell>
+                <cell id="108">
+                    <label id="132">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="109">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <data id="133">
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="paddingBottom">10pt</property>
+                        <property name="textAlign">justify</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Menetapkan</property>
+                                <text-property name="displayName">Menetapkan</text-property>
+                                <expression name="expression" type="javascript">vars["Menetapkan"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Menetapkan</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="111">
+                <cell id="112">
+                    <label id="134">
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Pertama</text-property>
+                    </label>
+                </cell>
+                <cell id="113">
+                    <label id="135">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="114">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text id="136">
+                        <property name="fontSize">11pt</property>
+                        <property name="paddingBottom">10pt</property>
+                        <property name="textAlign">justify</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Bahwa Pajak Daerah Pemerintah Kota Medan sebagaimana tertera dalam lampiran Surat Keputusan Kepala Badan Pengelola Pajak dan Retribusi Daerah ini atas nama Wajib Pajak sebagaimana tertera pada kolom 4, masa pajak pada kolom 7 dan jumlah pajak terhutang pada kolom 14.]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="116">
+                <cell id="117">
+                    <label id="137">
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Kedua</text-property>
+                    </label>
+                </cell>
+                <cell id="118">
+                    <label id="138">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="119">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text id="139">
+                        <property name="fontSize">11pt</property>
+                        <property name="paddingBottom">10pt</property>
+                        <property name="textAlign">justify</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Apabila Surat Ketetapan Pajak Daerah Kurang Bayar (SKPDKB) ini tidak atau kurang dibayar setelah lewat waktu paling lama 30 hari sejak SKPDKB diterima dikenakan sanksi administrasi berupa bunga sebesar 2% per bulan.]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="121">
+                <cell id="122">
+                    <label id="140">
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Ketiga</text-property>
+                    </label>
+                </cell>
+                <cell id="123">
+                    <label id="141">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="124">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text id="142">
+                        <property name="fontSize">11pt</property>
+                        <property name="paddingBottom">10pt</property>
+                        <property name="textAlign">justify</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Surat Ketetapan Pajak Daerah Kurang Bayar (SKPDKB) ini diterbitkan berdasarkan hasil pemeriksaan terhadap pembukuan/dokumen Wajib Pajak selaku Wajib Pajak Pungut Daerah.]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="126">
+                <property name="height">0.75in</property>
+                <cell id="127">
+                    <label id="143">
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Keempat</text-property>
+                    </label>
+                </cell>
+                <cell id="128">
+                    <label id="144">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="129">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text id="145">
+                        <property name="fontSize">11pt</property>
+                        <property name="textAlign">justify</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Surat Keputusan ini mulai berlaku sejak tanggal ditetapkan dan apabila dikemudian hari terdapat kekeliruan di dalamnya, akan diadakan pembetulan seperlunya.]]></text-property>
+                    </text>
+                </cell>
+            </row>
+        </grid>
+        <grid id="146">
+            <property name="height">2.6666666666666665in</property>
+            <property name="width">7.770833333333333in</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Kepala</property>
+                    <text-property name="displayName">Kepala</text-property>
+                    <expression name="expression" type="javascript">vars["Kepala"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="147">
+                <property name="width">3.8645833333333335in</property>
+            </column>
+            <column id="148">
+                <property name="width">1.125in</property>
+            </column>
+            <column id="187">
+                <property name="width">0.875in</property>
+            </column>
+            <column id="177">
+                <property name="width">1.90625in</property>
+            </column>
+            <row id="149">
+                <cell id="150"/>
+                <cell id="151">
+                    <label id="178">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">Ditetapkan di</text-property>
+                    </label>
+                </cell>
+                <cell id="180">
+                    <label id="188">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="paddingLeft">52pt</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="170">
+                    <label id="190">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">Medan</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="152">
+                <cell id="153"/>
+                <cell id="154">
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <label id="179">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <text-property name="text">Pada tanggal</text-property>
+                    </label>
+                </cell>
+                <cell id="181">
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <label id="189">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="paddingLeft">52pt</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="171">
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                </cell>
+            </row>
+            <row id="155">
+                <cell id="156"/>
+                <cell id="157">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                    <text id="191">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="paddingTop">15pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="textAlign">center</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[BADAN PENGELOLA 
+PAJAK DAN RETRIBUSI DAERAH KOTA MEDAN]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="158">
+                <property name="height">0.7916666666666666in</property>
+                <cell id="159"/>
+                <cell id="160">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">center</property>
+                    <data id="202">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="resultSetColumn">Kepala</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="161">
+                <cell id="162"/>
+                <cell id="163">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+                <cell id="196">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">left</property>
+                    <data id="192">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">penandatangan</property>
+                                <text-property name="displayName">penandatangan</text-property>
+                                <expression name="expression" type="javascript">vars["penandatangan"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">penandatangan</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="164">
+                <cell id="165"/>
+                <cell id="166">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+                <cell id="198">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">left</property>
+                    <data id="193">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">jabatan</property>
+                                <text-property name="displayName">jabatan</text-property>
+                                <expression name="expression" type="javascript">vars["jabatan"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">jabatan</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="167">
+                <cell id="168"/>
+                <cell id="169">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+                <cell id="200">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="textAlign">left</property>
+                    <data id="194">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">11pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">nip</property>
+                                <text-property name="displayName">nip</text-property>
+                                <expression name="expression" type="javascript">"Nip: " + vars["nip"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">nip</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="nomor">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="namaPajak">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="point6">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="point8">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="Menetapkan">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="penandatangan">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="jabatan">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="nip">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="Kepala">
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

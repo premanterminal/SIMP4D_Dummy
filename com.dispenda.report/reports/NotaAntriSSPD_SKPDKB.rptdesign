@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.1.v20110905 Build &lt;3.7.1.v20110905-1820></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <script-data-source name="dsNotaAntriSSPD" id="227"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="DataSetNotaSSPD" id="228">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">NoAntri</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Nama</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Alamat</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">NPWPD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">JenisPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">TipeSKP</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">MasaPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">KodePajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">KodeDenda</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">PokokPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Denda</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">TotalPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Total</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Terbilang</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">TanggalPenyetor</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">NamaPenyetor</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">Lokasi</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">NoSKP</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">KenaikanPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">DendaTerlambatSKPDKB</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">JumlahPemeriksaan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">DendaTelatLalu</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">DendaTelat</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">JumlahBayarSebelum</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">JumlahBayarSekarang</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">JumlahTerhutang</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">NoAntri</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Nama</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Alamat</property>
+                </structure>
+                <structure>
+                    <property name="columnName">NPWPD</property>
+                </structure>
+                <structure>
+                    <property name="columnName">JenisPajak</property>
+                </structure>
+                <structure>
+                    <property name="columnName">TipeSKP</property>
+                </structure>
+                <structure>
+                    <property name="columnName">MasaPajak</property>
+                </structure>
+                <structure>
+                    <property name="columnName">KodePajak</property>
+                </structure>
+                <structure>
+                    <property name="columnName">KodeDenda</property>
+                </structure>
+                <structure>
+                    <property name="columnName">PokokPajak</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Denda</property>
+                </structure>
+                <structure>
+                    <property name="columnName">TotalPajak</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Total</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Terbilang</property>
+                </structure>
+                <structure>
+                    <property name="columnName">TanggalPenyetor</property>
+                </structure>
+                <structure>
+                    <property name="columnName">NamaPenyetor</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Lokasi</property>
+                </structure>
+                <structure>
+                    <property name="columnName">NoSKP</property>
+                </structure>
+                <structure>
+                    <property name="columnName">KenaikanPajak</property>
+                </structure>
+                <structure>
+                    <property name="columnName">DendaTerlambatSKPDKB</property>
+                </structure>
+                <structure>
+                    <property name="columnName">JumlahPemeriksaan</property>
+                </structure>
+                <structure>
+                    <property name="columnName">DendaTelatLalu</property>
+                </structure>
+                <structure>
+                    <property name="columnName">DendaTelat</property>
+                </structure>
+                <structure>
+                    <property name="columnName">JumlahBayarSebelum</property>
+                </structure>
+                <structure>
+                    <property name="columnName">JumlahBayarSekarang</property>
+                </structure>
+                <structure>
+                    <property name="columnName">JumlahTerhutang</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">NoAntri</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Nama</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Alamat</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">NPWPD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">JenisPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">TipeSKP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">MasaPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">KodePajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">KodeDenda</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">PokokPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Denda</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">TotalPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Total</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Terbilang</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">TanggalPenyetor</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">NamaPenyetor</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">Lokasi</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">NoSKP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">KenaikanPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">DendaTerlambatSKPDKB</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">JumlahPemeriksaan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">DendaTelatLalu</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">DendaTelat</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">JumlahBayarSebelum</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">JumlahBayarSekarang</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">JumlahTerhutang</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">dsNotaAntriSSPD</property>
+            <method name="open"><![CDATA[importPackage(Packages.org.eclipse.core.runtime);
+count = 0;
+
+map = reportContext.getAppContext().get("Nota_Antri");]]></method>
+            <method name="fetch"><![CDATA[if(count<map.size()){
+	row["NoAntri"] = map.get("NoAntri");
+	row["Nama"] = map.get("Nama");
+	row["Alamat"] = map.get("Alamat");
+	row["NPWPD"] = map.get("NPWPD");
+	row["JenisPajak"] = map.get("NamaPajak");
+	row["TipeSKP"] = map.get("TipeSKP");
+	row["MasaPajak"] = map.get("MasaPajak");
+	row["KodePajak"] = map.get("KodePajak");
+	row["KodeDenda"] = map.get("KodeDenda");
+	row["PokokPajak"] = map.get("PokokPajak");
+	row["Denda"] = map.get("Denda");
+	row["TotalPajak"] = map.get("TotalPajak");
+	row["Total"] = map.get("Total");
+	row["KenaikanPajak"] = map.get("KenaikanPajak");
+	row["DendaTerlambatSKPDKB"] = map.get("DendaTerlambatSKPDKB");
+	row["JumlahPemeriksaan"] = map.get("JumlahPemeriksaan");
+	row["DendaTelatLalu"] = map.get("DendaTerlambatSebelumnya");
+	row["DendaTelat"] = map.get("DendaSSPD");
+	row["JumlahBayarSebelum"] = map.get("JumlahBayarSebelum");
+	row["JumlahBayarSekarang"] = map.get("Total");
+	row["JumlahTerhutang"] = map.get("JumlahTerhutang");
+	row["Terbilang"] = map.get("Terbilang");
+	row["NoSKP"] = map.get("NoSKP");
+	row["TanggalPenyetor"] = map.get("TanggalPenyetor");
+	row["NamaPenyetor"] = map.get("NamaPenyetor");
+	count++;
+	return true;
+}
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="topMargin">1in</property>
+            <property name="leftMargin">0.5in</property>
+            <property name="rightMargin">0.5in</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="105">
+            <property name="fontFamily">"Calibri"</property>
+            <property name="fontSize">16pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">DAFTAR ANTRIAN SSPD</text-property>
+        </label>
+        <grid id="7">
+            <property name="height">3.96875in</property>
+            <property name="width">7.333333333333333in</property>
+            <column id="104">
+                <property name="width">0.4479166666666667in</property>
+            </column>
+            <column id="8">
+                <property name="width">2.1458333333333335in</property>
+            </column>
+            <column id="9">
+                <property name="width">0.25in</property>
+            </column>
+            <column id="10">
+                <property name="width">4.489583333333333in</property>
+            </column>
+            <row id="256">
+                <property name="height">0.3541666666666667in</property>
+                <cell id="257"/>
+                <cell id="258"/>
+                <cell id="259"/>
+                <cell id="260"/>
+            </row>
+            <row id="11">
+                <cell id="91"/>
+                <cell id="12">
+                    <label id="63">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">No Antri</text-property>
+                    </label>
+                </cell>
+                <cell id="13">
+                    <label id="70">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="14">
+                    <data id="229">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NoAntri</property>
+                                <text-property name="displayName">NoAntri</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NoAntri"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NoAntri</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="15">
+                <cell id="92"/>
+                <cell id="16">
+                    <label id="64">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Nama</text-property>
+                    </label>
+                </cell>
+                <cell id="17">
+                    <label id="71">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="18">
+                    <data id="230">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Nama</property>
+                                <text-property name="displayName">Nama</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Nama"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Nama</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="19">
+                <cell id="93"/>
+                <cell id="20">
+                    <label id="65">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Alamat</text-property>
+                    </label>
+                </cell>
+                <cell id="21">
+                    <label id="72">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="22">
+                    <data id="231">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Alamat</property>
+                                <text-property name="displayName">Alamat</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Alamat"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Alamat</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="23">
+                <cell id="94"/>
+                <cell id="24">
+                    <label id="66">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">NPWPD</text-property>
+                    </label>
+                </cell>
+                <cell id="25">
+                    <label id="73">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="26">
+                    <data id="232">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NPWPD</property>
+                                <text-property name="displayName">NPWPD</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NPWPD"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NPWPD</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="27">
+                <cell id="95"/>
+                <cell id="28">
+                    <label id="67">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Jenis Pajak</text-property>
+                    </label>
+                </cell>
+                <cell id="29">
+                    <label id="74">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="30">
+                    <data id="233">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">JenisPajak</property>
+                                <text-property name="displayName">JenisPajak</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["JenisPajak"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">JenisPajak</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="31">
+                <cell id="96"/>
+                <cell id="32">
+                    <label id="68">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Menyetor berdasarkan</text-property>
+                    </label>
+                </cell>
+                <cell id="33">
+                    <label id="75">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="34">
+                    <data id="234">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">TipeSKP</property>
+                                <text-property name="displayName">TipeSKP</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TipeSKP"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">TipeSKP</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="35">
+                <cell id="97"/>
+                <cell id="36">
+                    <label id="69">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Masa Pajak</text-property>
+                    </label>
+                </cell>
+                <cell id="37">
+                    <label id="76">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="38">
+                    <data id="235">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">MasaPajak</property>
+                                <text-property name="displayName">MasaPajak</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["MasaPajak"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">MasaPajak</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="282">
+                <property name="height">0.625in</property>
+                <cell id="283"/>
+                <cell id="284">
+                    <data id="292">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">TipeSKP</property>
+                                <text-property name="displayName">TipeSKP</text-property>
+                                <expression name="expression" type="javascript">"No " + dataSetRow["TipeSKP"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">TipeSKP</property>
+                    </data>
+                </cell>
+                <cell id="285">
+                    <label id="289">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="286">
+                    <data id="290">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NoSKP</property>
+                                <text-property name="displayName">NoSKP</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NoSKP"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NoSKP</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+        <grid id="293">
+            <property name="height">8.995833333333334cm</property>
+            <property name="width">7.09375in</property>
+            <column id="294">
+                <property name="width">0.6666666666666666in</property>
+            </column>
+            <column id="295">
+                <property name="width">3.6041666666666665in</property>
+            </column>
+            <column id="296">
+                <property name="width">0.42333333333333334cm</property>
+            </column>
+            <column id="297">
+                <property name="width">2.2916666666666665in</property>
+            </column>
+            <column id="298">
+                <property name="width">0.3645833333333333in</property>
+            </column>
+            <row id="299">
+                <cell id="300"/>
+                <cell id="301">
+                    <data id="328">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">KodePajak</property>
+                                <text-property name="displayName">KodePajak</text-property>
+                                <expression name="expression" type="javascript">"Pokok Pajak (" + dataSetRow["KodePajak"] + ")"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">KodePajak</property>
+                    </data>
+                </cell>
+                <cell id="302">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="139">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="303">
+                    <property name="textAlign">right</property>
+                    <data id="315">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">PokokPajak</property>
+                                <text-property name="displayName">PokokPajak</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PokokPajak"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">PokokPajak</property>
+                    </data>
+                </cell>
+                <cell id="304"/>
+            </row>
+            <row id="305">
+                <cell id="306"/>
+                <cell id="77">
+                    <data id="329">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">KodePajak</property>
+                                <text-property name="displayName">KodePajak</text-property>
+                                <expression name="expression" type="javascript">"Kenaikan Pajak (" + dataSetRow["KodePajak"] + ")"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">KodePajak</property>
+                    </data>
+                </cell>
+                <cell id="78">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="140">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="79">
+                    <property name="textAlign">right</property>
+                    <data id="316">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">KenaikanPajak</property>
+                                <text-property name="displayName">KenaikanPajak</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["KenaikanPajak"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">KenaikanPajak</property>
+                    </data>
+                </cell>
+                <cell id="80"/>
+            </row>
+            <row id="81">
+                <cell id="82"/>
+                <cell id="83">
+                    <data id="327">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">KodeDenda</property>
+                                <text-property name="displayName">KodeDenda</text-property>
+                                <expression name="expression" type="javascript">"Denda (" +dataSetRow["KodeDenda"] + ")"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">KodeDenda</property>
+                    </data>
+                </cell>
+                <cell id="84">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="141">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="85">
+                    <property name="textAlign">right</property>
+                    <data id="317">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Denda</property>
+                                <text-property name="displayName">Denda</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Denda"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Denda</property>
+                    </data>
+                </cell>
+                <cell id="86">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">2</property>
+                    <label id="143">
+                        <property name="paddingTop">10pt</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">+</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="87">
+                <cell id="88"/>
+                <cell id="89">
+                    <label id="138">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Denda Terlambat SKPDKB</text-property>
+                    </label>
+                </cell>
+                <cell id="90">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="142">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="307">
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="textAlign">right</property>
+                    <data id="318">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">DendaTerlambatSKPDKB</property>
+                                <text-property name="displayName">DendaTerlambatSKPDKB</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["DendaTerlambatSKPDKB"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">DendaTerlambatSKPDKB</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="308">
+                <cell id="309"/>
+                <cell id="310">
+                    <label id="145">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Jumlah Hasil Pemeriksaan</text-property>
+                    </label>
+                </cell>
+                <cell id="311">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="152">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="312">
+                    <property name="textAlign">right</property>
+                    <data id="319">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">JumlahPemeriksaan</property>
+                                <text-property name="displayName">JumlahPemeriksaan</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["JumlahPemeriksaan"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">JumlahPemeriksaan</property>
+                    </data>
+                </cell>
+                <cell id="98"/>
+            </row>
+            <row id="99">
+                <cell id="100"/>
+                <cell id="101">
+                    <label id="146">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Denda Keterlambatan yang lalu</text-property>
+                    </label>
+                </cell>
+                <cell id="102">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="153">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="103">
+                    <property name="textAlign">right</property>
+                    <data id="320">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">DendaTelatLalu</property>
+                                <text-property name="displayName">DendaTelatLalu</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["DendaTelatLalu"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">DendaTelatLalu</property>
+                    </data>
+                </cell>
+                <cell id="313"/>
+            </row>
+            <row id="314">
+                <cell id="106"/>
+                <cell id="107">
+                    <data id="326">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">KodeDenda</property>
+                                <text-property name="displayName">KodeDenda</text-property>
+                                <expression name="expression" type="javascript">"Denda Keterlambatan (" + dataSetRow["KodeDenda"] +")"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">KodeDenda</property>
+                    </data>
+                </cell>
+                <cell id="108">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="154">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="109">
+                    <property name="textAlign">right</property>
+                    <data id="321">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">DendaTelat</property>
+                                <text-property name="displayName">DendaTelat</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["DendaTelat"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">DendaTelat</property>
+                    </data>
+                </cell>
+                <cell id="110">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">2</property>
+                    <label id="170">
+                        <property name="marginTop">10pt</property>
+                        <text-property name="text">+</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="111">
+                <cell id="112"/>
+                <cell id="113">
+                    <label id="148">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Total</text-property>
+                    </label>
+                </cell>
+                <cell id="114">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="155">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="115">
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="textAlign">right</property>
+                    <data id="322">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">TotalPajak</property>
+                                <text-property name="displayName">TotalPajak</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TotalPajak"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">TotalPajak</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="117">
+                <cell id="118"/>
+                <cell id="119">
+                    <label id="149">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Jumlah Setoran/Cicilan yang lalu</text-property>
+                    </label>
+                </cell>
+                <cell id="120">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="156">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="121">
+                    <property name="textAlign">right</property>
+                    <data id="323">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">JumlahBayarSebelum</property>
+                                <text-property name="displayName">JumlahBayarSebelum</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["JumlahBayarSebelum"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">JumlahBayarSebelum</property>
+                    </data>
+                </cell>
+                <cell id="122"/>
+            </row>
+            <row id="123">
+                <cell id="124"/>
+                <cell id="125">
+                    <label id="150">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Jumlah Setoran/Cicilan saat ini</text-property>
+                    </label>
+                </cell>
+                <cell id="126">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="157">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="127">
+                    <property name="textAlign">right</property>
+                    <data id="324">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Total</property>
+                                <text-property name="displayName">Total</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Total"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Total</property>
+                    </data>
+                </cell>
+                <cell id="128">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">2</property>
+                    <label id="171">
+                        <property name="marginTop">10pt</property>
+                        <text-property name="text">-</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="129">
+                <property name="height">1.2170833333333333cm</property>
+                <cell id="130"/>
+                <cell id="131">
+                    <label id="151">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Jumlah Terhutang</text-property>
+                    </label>
+                </cell>
+                <cell id="132">
+                    <property name="fontFamily">"Calibri"</property>
+                    <property name="fontWeight">bold</property>
+                    <label id="158">
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="133">
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="textAlign">right</property>
+                    <data id="325">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">JumlahTerhutang</property>
+                                <text-property name="displayName">JumlahTerhutang</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["JumlahTerhutang"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">JumlahTerhutang</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+        <grid id="271">
+            <property name="height">0.53125in</property>
+            <property name="width">6.975in</property>
+            <column id="272">
+                <property name="width">0.4083333333333333in</property>
+            </column>
+            <column id="273">
+                <property name="width">6.1in</property>
+            </column>
+            <column id="274">
+                <property name="width">0.4666666666666667in</property>
+            </column>
+            <row id="275">
+                <property name="height">0.53125in</property>
+                <cell id="276"/>
+                <cell id="277">
+                    <data id="248">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Terbilang</property>
+                                <text-property name="displayName">Terbilang</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Terbilang"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Terbilang</property>
+                    </data>
+                </cell>
+                <cell id="278"/>
+            </row>
+        </grid>
+        <grid id="173">
+            <property name="height">2in</property>
+            <property name="width">7.229166666666667in</property>
+            <column id="174">
+                <property name="width">4.53125in</property>
+            </column>
+            <column id="175">
+                <property name="width">2.6979166666666665in</property>
+            </column>
+            <row id="245">
+                <property name="height">0.20833333333333334in</property>
+                <cell id="246"/>
+                <cell id="247">
+                    <property name="verticalAlign">bottom</property>
+                </cell>
+            </row>
+            <row id="176">
+                <property name="height">1.0104166666666667in</property>
+                <cell id="177"/>
+                <cell id="178">
+                    <data id="255">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">TanggalPenyetor</property>
+                                <text-property name="displayName">TanggalPenyetor</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TanggalPenyetor"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">TanggalPenyetor</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="261">
+                <property name="height">0.78125in</property>
+                <cell id="262"/>
+                <cell id="263">
+                    <data id="264">
+                        <property name="fontFamily">"Calibri"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="dataSet">DataSetNotaSSPD</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NamaPenyetor</property>
+                                <text-property name="displayName">NamaPenyetor</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NamaPenyetor"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NamaPenyetor</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

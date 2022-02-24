@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.dispenda.main.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Main Perspective"
+            class="com.dispenda.perspectives.MainPerspective"
+            id="com.dispenda.perspectives.MainPerspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="com.dispenda.views.MainView"
+            icon="img/home.gif"
+            id="com.dispenda.views.MainView"
+            name="Menu Utama">
+      </view>
+      <view
+            allowMultiple="false"
+            class="com.dispenda.views.ToolbarView"
+            icon="img/home.gif"
+            id="com.dispenda.views.ToolbarView"
+            name="Toolbar">
+      </view>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.dispenda.main.application"
+            name="SIMP4D Kota Medan">
+         <property
+               name="aboutText"
+               value="Created by Tim IT BPPRD Kota Medan&#x0A;Copyright Badan Pengelola Pajak dan Retribusi Daerah Kota Medan">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/logo16x16.gif,icons/logo32x32.gif,icons/logo48x48.gif,icons/logo64x64.gif,icons/logo128x128.gif">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/logo128x128.gif">
+         </property>
+         <property
+               name="appName"
+               value="SIMP4D Kota Medan">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+   </extension>
+   <extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandler
+            class="com.dispenda.main.splashHandlers.InteractiveSplashHandler"
+            id="com.dispenda.main.splashHandlers.interactive">
+      </splashHandler>
+   </extension>
+
+</plugin>

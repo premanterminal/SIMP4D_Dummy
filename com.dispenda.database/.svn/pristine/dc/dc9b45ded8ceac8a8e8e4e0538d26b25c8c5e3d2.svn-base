@@ -1,0 +1,31 @@
+package com.dispenda.database;
+
+import java.sql.Connection;
+
+import org.eclipse.core.runtime.Platform;
+
+public class DBConnection {
+
+	String dbPath = "jdbc:hsqldb:hsql://localhost/db/";
+	String DBName = "dbdis";
+//	String dbPath = "jdbc:hsqldb:file:"+Platform.getLocation()+"/";
+//	String DBName = "dbPP";
+	DbClass db;
+	Connection con;
+	
+	public DBConnection(){
+		
+	}
+		
+	public Connection ConnectToDb() throws Exception {
+		db = new DbClass (DBName, dbPath);
+		con = DbClass.getConn();
+//		System.out.println("Connecting to DataBase..");
+		return con;
+	}
+	
+	public void close() throws Exception{
+		db.shutdown();
+//		System.out.println("Disconnecting DataBase..");
+	}
+}

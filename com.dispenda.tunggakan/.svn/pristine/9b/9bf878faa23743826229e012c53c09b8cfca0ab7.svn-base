@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Tunggakan Category"
+            id="com.dispenda.tunggakan">
+      </category>
+      <view
+            name="Tunggakan"
+            icon="icons/tunggakan.gif"
+            category="com.dispenda.tunggakan"
+            class="com.dispenda.tunggakan.views.TunggakanSptpdView"
+            id="com.dispenda.tunggakan.views.TunggakanSptpdView">
+      </view>
+      <view
+            category="com.dispenda.tunggakan"
+            class="com.dispenda.tunggakan.views.TunggakanWpView"
+            icon="icons/tunggakan.gif"
+            id="com.dispenda.tunggakan.views.TunggakanWpView"
+            name="Tunggakan WP">
+      </view>
+      <view
+            category="com.dispenda.tunggakan"
+            class="com.dispenda.tunggakan.views.TunggakanDendaView"
+            icon="icons/tunggakan.gif"
+            id="com.dispenda.tunggakan.views.TunggakanDendaView"
+            name="Tunggakan Denda">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.dispenda.tunggakan.perspectives.TunggakanPerspective"
+            id="com.dispenda.tunggakan.perspectives.TunggakanPerspective"
+            name="Tunggakan Perspective">
+      </perspective>
+   </extension>
+
+</plugin>

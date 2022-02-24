@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.1.v20110905 Build &lt;3.7.1.v20110905-1820></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <script-data-source name="Data Source" id="56"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="Data Set" id="57">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">0</property>
+                    <property name="name">NamaBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">TanggalSKPD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">MasaPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">TanggalSSPD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">NilaiPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">NilaiPajakPerBulan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">WaktuPendapatanLO</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">NilaiPendapatanLO</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">WaktuPendapatanDimuka</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">NilaiPendapatanDimuka</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">NamaBadan</property>
+                    <text-property name="displayName">Nama Badan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TanggalSKPD</property>
+                    <text-property name="displayName">Tanggal Terbit SKPD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MasaPajak</property>
+                    <text-property name="displayName">Masa Pajak</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TanggalSSPD</property>
+                    <text-property name="displayName">Tanggal SSPD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NilaiPajak</property>
+                    <text-property name="displayName">Nilai Pajak</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NilaiPajakPerBulan</property>
+                    <text-property name="displayName">Nilai Pend. LO (Rp)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">WaktuPendapatanLO</property>
+                    <text-property name="displayName">Jk. Waktu</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NilaiPendapatanLO</property>
+                    <text-property name="displayName">Nilai</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">WaktuPendapatanDimuka</property>
+                    <text-property name="displayName">Jk. Waktu</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NilaiPendapatanDimuka</property>
+                    <text-property name="displayName">Nilai</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">NamaBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">TanggalSKPD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">MasaPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">TanggalSSPD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">NilaiPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">NilaiPajakPerBulan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">WaktuPendapatanLO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">NilaiPendapatanLO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">WaktuPendapatanDimuka</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">NilaiPendapatanDimuka</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <method name="open"><![CDATA[importPackage(Packages.org.eclipse.core.runtime);
+importPackage( Packages.org.eclipse.swt.widgets);
+count = 0;
+
+map = reportContext.getAppContext().get("ReklamePendapatanDimuka");]]></method>
+            <method name="fetch"><![CDATA[if(count<map.size()){
+	row["NamaBadan"] = map.get(""+count).get(0);
+    row["TanggalSKPD"] = map.get(""+count).get(1);
+    row["MasaPajak"] = map.get(""+count).get(2);
+    row["TanggalSSPD"] = map.get(""+count).get(3);
+    row["NilaiPajak"] = map.get(""+count).get(4);
+    row["NilaiPajakPerBulan"] = map.get(""+count).get(5);
+    row["WaktuPendapatanLO"] = map.get(""+count).get(6);
+    row["NilaiPendapatanLO"] = map.get(""+count).get(7);
+    row["WaktuPendapatanDimuka"] = map.get(""+count).get(8);
+    row["NilaiPendapatanDimuka"] = map.get(""+count).get(9);
+	count++;
+	return true;
+}
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2"/>
+    </page-setup>
+    <body>
+        <label id="9">
+            <property name="fontSize">7pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">PERHITUNGAN PENDAPATAN DITERIMA DIMUKA ATAS PAJAK REKLAME</text-property>
+        </label>
+        <label id="10">
+            <property name="fontSize">7pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">DINAS PENDAPATAN KOTA MEDAN</text-property>
+        </label>
+        <label id="11">
+            <property name="fontSize">7pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">TAHUN 2017</text-property>
+        </label>
+        <grid id="12">
+            <property name="height">0.25in</property>
+            <column id="13"/>
+            <row id="14">
+                <property name="height">0.25in</property>
+                <cell id="15"/>
+            </row>
+        </grid>
+        <table id="278">
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">NamaBadan</property>
+                    <text-property name="displayName">Nama Badan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NamaBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TanggalSKPD</property>
+                    <text-property name="displayName">Tanggal Terbit SKPD</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TanggalSKPD"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MasaPajak</property>
+                    <text-property name="displayName">Masa Pajak</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MasaPajak"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TanggalSSPD</property>
+                    <text-property name="displayName">Tanggal SSPD</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TanggalSSPD"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NilaiPajak</property>
+                    <text-property name="displayName">Nilai Pajak</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NilaiPajak"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NilaiPajakPerBulan</property>
+                    <text-property name="displayName">Nilai Pend. LO (Rp)</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NilaiPajakPerBulan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">WaktuPendapatanLO</property>
+                    <text-property name="displayName">Jk. Waktu</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["WaktuPendapatanLO"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NilaiPendapatanLO</property>
+                    <text-property name="displayName">Nilai</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NilaiPendapatanLO"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">WaktuPendapatanDimuka</property>
+                    <text-property name="displayName">Jk. Waktu</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["WaktuPendapatanDimuka"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NilaiPendapatanDimuka</property>
+                    <text-property name="displayName">Nilai</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NilaiPendapatanDimuka"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="332"/>
+            <column id="333"/>
+            <column id="334"/>
+            <column id="335"/>
+            <column id="336"/>
+            <column id="337"/>
+            <column id="338"/>
+            <column id="339"/>
+            <column id="340"/>
+            <column id="341"/>
+            <header>
+                <row id="342">
+                    <cell id="343">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">3</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="281">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Nama Badan</text-property>
+                        </label>
+                    </cell>
+                    <cell id="344">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">3</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="283">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Tanggal Terbit SKPD</text-property>
+                        </label>
+                    </cell>
+                    <cell id="345">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">3</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="285">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Masa Pajak</text-property>
+                        </label>
+                    </cell>
+                    <cell id="346">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">3</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="287">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Tanggal SSPD</text-property>
+                        </label>
+                    </cell>
+                    <cell id="347">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">3</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="verticalAlign">middle</property>
+                        <label id="289">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Nilai Pajak</text-property>
+                        </label>
+                    </cell>
+                    <cell id="348">
+                        <property name="colSpan">1</property>
+                        <property name="rowSpan">2</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="291">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Nilai Pend. LO (Rp)</text-property>
+                        </label>
+                    </cell>
+                    <cell id="349">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="370">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Sudah menjadi Pendapatan LO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="351">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="371">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Pendapatan diterima dimuka</text-property>
+                        </label>
+                    </cell>
+                </row>
+                <row id="353">
+                    <cell id="360">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="293">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Jk. Waktu</text-property>
+                        </label>
+                    </cell>
+                    <cell id="361">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="295">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Nilai</text-property>
+                        </label>
+                    </cell>
+                    <cell id="362">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="297">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Jk. Waktu</text-property>
+                        </label>
+                    </cell>
+                    <cell id="363">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="299">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Nilai</text-property>
+                        </label>
+                    </cell>
+                </row>
+                <row id="279">
+                    <cell id="290">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="364">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Bulan</text-property>
+                        </label>
+                    </cell>
+                    <cell id="292">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="365">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">(Bulan)</text-property>
+                        </label>
+                    </cell>
+                    <cell id="294">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="366">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Rp.</text-property>
+                        </label>
+                    </cell>
+                    <cell id="296">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="368">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">(Bulan)</text-property>
+                        </label>
+                    </cell>
+                    <cell id="298">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="367">
+                            <property name="fontSize">7pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Rp.</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="300">
+                    <cell id="301">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="302">
+                            <property name="fontSize">7pt</property>
+                            <property name="resultSetColumn">NamaBadan</property>
+                        </data>
+                    </cell>
+                    <cell id="303">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="304">
+                            <property name="fontSize">7pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">TanggalSKPD</property>
+                        </data>
+                    </cell>
+                    <cell id="305">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="306">
+                            <property name="fontSize">7pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">MasaPajak</property>
+                        </data>
+                    </cell>
+                    <cell id="307">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="308">
+                            <property name="fontSize">7pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">TanggalSSPD</property>
+                        </data>
+                    </cell>
+                    <cell id="309">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="310">
+                            <property name="fontSize">7pt</property>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">NilaiPajak</property>
+                        </data>
+                    </cell>
+                    <cell id="311">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="312">
+                            <property name="fontSize">7pt</property>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">NilaiPajakPerBulan</property>
+                        </data>
+                    </cell>
+                    <cell id="313">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="314">
+                            <property name="fontSize">7pt</property>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">WaktuPendapatanLO</property>
+                        </data>
+                    </cell>
+                    <cell id="315">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="316">
+                            <property name="fontSize">7pt</property>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">NilaiPendapatanLO</property>
+                        </data>
+                    </cell>
+                    <cell id="317">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="318">
+                            <property name="fontSize">7pt</property>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">WaktuPendapatanDimuka</property>
+                        </data>
+                    </cell>
+                    <cell id="319">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="320">
+                            <property name="fontSize">7pt</property>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">NilaiPendapatanDimuka</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="321">
+                    <cell id="322"/>
+                    <cell id="323"/>
+                    <cell id="324"/>
+                    <cell id="325"/>
+                    <cell id="326"/>
+                    <cell id="327"/>
+                    <cell id="328"/>
+                    <cell id="329"/>
+                    <cell id="330"/>
+                    <cell id="331"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

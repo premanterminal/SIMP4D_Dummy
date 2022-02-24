@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Main
+Bundle-SymbolicName: com.dispenda.main; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.dispenda.main.MainActivator
+Bundle-Vendor: DISPENDA
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.dispenda.pendaftaran;bundle-version="1.0.0",
+ com.dispenda.angsuran;bundle-version="1.0.0",
+ com.dispenda.skpdkb;bundle-version="1.0.0",
+ com.dispenda.sspd;bundle-version="1.0.0",
+ com.dispenda.sptpd;bundle-version="1.0.0",
+ com.dispenda.db;bundle-version="1.0.0",
+ com.dispenda.control;bundle-version="1.0.0",
+ org.eclipse.equinox.p2.core;bundle-version="2.1.0",
+ org.eclipse.equinox.p2.metadata;bundle-version="2.1.0",
+ org.eclipse.equinox.p2.operations;bundle-version="2.1.0",
+ org.eclipse.equinox.p2.repository;bundle-version="2.1.0",
+ com.dispenda.laporan;bundle-version="1.0.0",
+ com.dispenda.realisasi;bundle-version="1.0.0",
+ com.dispenda.tunggakan;bundle-version="1.0.0",
+ com.dispenda.arsip;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

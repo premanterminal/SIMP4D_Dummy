@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Arsip
+Bundle-SymbolicName: com.dispenda.arsip; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.dispenda.arsip.Activator
+Bundle-Vendor: DISPENDA
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.dispenda.db;bundle-version="1.0.0",
+ org.eclipse.nebula.widgets.tablecombo;bundle-version="1.0.0",
+ com.dispenda.report;bundle-version="1.0.0",
+ zxing;bundle-version="3.2.1",
+ org.eclipse.nebula.widgets.grid;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: com.dispenda.arsip.views

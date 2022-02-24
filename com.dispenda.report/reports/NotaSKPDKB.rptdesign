@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.1.v20110905 Build &lt;3.7.1.v20110905-1820></property>
+    <property name="units">cm</property>
+    <method name="onPrepare"><![CDATA[varn = reportContext.getAppContext().get("Variable");
+vars["Nama1"] = varn.get("Nama1");
+vars["Pangkat1"] = varn.get("Pangkat1");
+vars["NIP1"] = varn.get("NIP1");
+vars["Nama2"] = varn.get("Nama2");
+vars["Pangkat2"] = varn.get("Pangkat2");
+vars["NIP2"] = varn.get("NIP2");
+vars["Jabatan1"] = varn.get("Jabatan1");
+vars["Jabatan2"] = varn.get("Jabatan2");]]></method>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <script-data-source name="Data Source" id="22"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="Data Set" id="23">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">MasaPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">NoNPPD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">NamaBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">AlamatBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">NPWPD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">NamaPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">Tarif</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">PajakTerutang</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">Kenaikan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Denda</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">Bunga</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">Total</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">Terbilang</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Tanggal</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">PajakPeriksa</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">KurangBayar</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">MasaPajak</property>
+                    <text-property name="displayName">MasaPajak</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NoNPPD</property>
+                    <text-property name="displayName">NoNPPD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NamaBadan</property>
+                    <text-property name="displayName">NamaBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AlamatBadan</property>
+                    <text-property name="displayName">AlamatBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NPWPD</property>
+                    <text-property name="displayName">NPWPD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NamaPajak</property>
+                    <text-property name="displayName">NamaPajak</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Tarif</property>
+                    <text-property name="displayName">Tarif</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PajakTerutang</property>
+                    <text-property name="displayName">PajakTerutang</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Kenaikan</property>
+                    <text-property name="displayName">Kenaikan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Denda</property>
+                    <text-property name="displayName">Denda</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Bunga</property>
+                    <text-property name="displayName">Bunga</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Total</property>
+                    <text-property name="displayName">Total</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Terbilang</property>
+                    <text-property name="displayName">Terbilang</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Tanggal</property>
+                    <text-property name="displayName">Tanggal</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PajakPeriksa</property>
+                    <text-property name="displayName">PajakPeriksa</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KurangBayar</property>
+                    <text-property name="displayName">KurangBayar</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">MasaPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">NoNPPD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">NamaBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">AlamatBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">NPWPD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">NamaPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">Tarif</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">PajakTerutang</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">Kenaikan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Denda</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">Bunga</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">Total</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">Terbilang</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Tanggal</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">PajakPeriksa</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">KurangBayar</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <method name="open"><![CDATA[importPackage(Packages.org.eclipse.core.runtime);
+count = 0;
+
+map = reportContext.getAppContext().get("NotaSKPD");
+var varKabid = vars["Nama2"];
+if (varKabid == "Drs. Nawawi") {
+	reportContext.setPersistentGlobalVariable("Plh", "hideColumns");
+}]]></method>
+            <method name="fetch"><![CDATA[if(count<map.size()){
+	row["NamaPajak"] = map.get(""+count).get(11);
+	row["NamaBadan"] = map.get(""+count).get(6);
+	row["NoNPPD"] = map.get(""+count).get(2);
+	row["MasaPajak"] = map.get(""+count).get(3);
+	row["NPWPD"] = map.get(""+count).get(8);
+	row["AlamatBadan"] = map.get(""+count).get(7);
+	row["Tarif"] = map.get(""+count).get(12);
+	row["PajakTerutang"] = map.get(""+count).get(14);
+	row["Kenaikan"] = map.get(""+count).get(17);
+	row["Denda"] = map.get(""+count).get(19);
+	row["Bunga"] = map.get(""+count).get(16);
+	row["Total"] = map.get(""+count).get(21);
+	row["Tanggal"] = map.get(""+count).get(5);
+	row["PajakPeriksa"] = map.get(""+count).get(13);
+	row["KurangBayar"] = map.get(""+count).get(15);
+	row["Terbilang"] = map.get(""+count).get(22);
+	count++;
+	return true;
+}
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="height">24cm</property>
+            <property name="width">29.7cm</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0in</property>
+            <property name="leftMargin">0.1in</property>
+            <property name="bottomMargin">0in</property>
+            <property name="rightMargin">0in</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="237">
+            <property name="width">29.50104166666667cm</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">MasaPajak</property>
+                    <text-property name="displayName">MasaPajak</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MasaPajak"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NoNPPD</property>
+                    <text-property name="displayName">NoNPPD</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NoNPPD"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NamaBadan</property>
+                    <text-property name="displayName">NamaBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NamaBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AlamatBadan</property>
+                    <text-property name="displayName">AlamatBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["AlamatBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NPWPD</property>
+                    <text-property name="displayName">NPWPD</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NPWPD"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NamaPajak</property>
+                    <text-property name="displayName">NamaPajak</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NamaPajak"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Tarif</property>
+                    <text-property name="displayName">Tarif</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Tarif"] + "%"</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">PajakTerutang</property>
+                    <text-property name="displayName">PajakTerutang</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PajakTerutang"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Kenaikan</property>
+                    <text-property name="displayName">Kenaikan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Kenaikan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Denda</property>
+                    <text-property name="displayName">Denda</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Denda"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Bunga</property>
+                    <text-property name="displayName">Bunga</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Bunga"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Total</property>
+                    <text-property name="displayName">Total</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Total"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Terbilang</property>
+                    <text-property name="displayName">Terbilang</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Terbilang"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Tanggal</property>
+                    <text-property name="displayName">Tanggal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Tanggal"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PajakPeriksa</property>
+                    <text-property name="displayName">PajakPeriksa</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PajakPeriksa"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KurangBayar</property>
+                    <text-property name="displayName">KurangBayar</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KurangBayar"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="244">
+                <property name="width">29.50104166666667cm</property>
+            </column>
+            <detail>
+                <row id="240">
+                    <property name="height">23.495cm</property>
+                    <cell id="241">
+                        <grid id="8">
+                            <property name="height">0.6085416666666666cm</property>
+                            <property name="width">28.23104166666667cm</property>
+                            <column id="9">
+                                <property name="width">28.23104166666667cm</property>
+                            </column>
+                            <row id="10">
+                                <property name="height">0.6085416666666666cm</property>
+                                <cell id="11">
+                                    <data id="246">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <property name="paddingTop">7pt</property>
+                                        <property name="paddingBottom">1pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">NoNPPD</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="12">
+                            <property name="height">0.5820833333333333cm</property>
+                            <property name="width">27.913541666666667cm</property>
+                            <column id="13">
+                                <property name="width">12.038541666666665cm</property>
+                            </column>
+                            <column id="14">
+                                <property name="width">6.720416666666667cm</property>
+                            </column>
+                            <column id="15">
+                                <property name="width">6.0325cm</property>
+                            </column>
+                            <column id="16">
+                                <property name="width">3.1220833333333338cm</property>
+                            </column>
+                            <row id="17">
+                                <property name="height">0.5820833333333333cm</property>
+                                <cell id="18"/>
+                                <cell id="19">
+                                    <data id="245">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <property name="resultSetColumn">MasaPajak</property>
+                                    </data>
+                                </cell>
+                                <cell id="20"/>
+                                <cell id="21"/>
+                            </row>
+                        </grid>
+                        <grid id="33">
+                            <property name="height">1.1641666666666666cm</property>
+                            <property name="width">27.675416666666667cm</property>
+                            <column id="34">
+                                <property name="width">15.769166666666667cm</property>
+                            </column>
+                            <column id="35">
+                                <property name="width">0.635cm</property>
+                            </column>
+                            <column id="36">
+                                <property name="width">6.455833333333333cm</property>
+                            </column>
+                            <column id="37">
+                                <property name="width">1.8958333333333333in</property>
+                            </column>
+                            <row id="38">
+                                <property name="height">1.1641666666666666cm</property>
+                                <cell id="39"/>
+                                <cell id="40">
+                                    <label id="44">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <text-property name="text">X</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="41">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="45">
+                            <property name="height">0.6666666666666666in</property>
+                            <property name="width">28.575cm</property>
+                            <column id="46">
+                                <property name="width">2.8839583333333336cm</property>
+                            </column>
+                            <column id="47">
+                                <property name="width">5.662083333333333cm</property>
+                            </column>
+                            <column id="48">
+                                <property name="width">1.984375cm</property>
+                            </column>
+                            <column id="49">
+                                <property name="width">7.963958333333333cm</property>
+                            </column>
+                            <column id="50">
+                                <property name="width">2.2754166666666666cm</property>
+                            </column>
+                            <column id="51">
+                                <property name="width">7.752291666666667cm</property>
+                            </column>
+                            <column id="52">
+                                <property name="width">0.05291666666666667cm</property>
+                            </column>
+                            <row id="53">
+                                <property name="height">0.19791666666666666in</property>
+                                <cell id="54">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">4</property>
+                                </cell>
+                                <cell id="55">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">4</property>
+                                    <property name="verticalAlign">middle</property>
+                                    <data id="247">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <property name="textAlign">left</property>
+                                        <property name="resultSetColumn">NamaBadan</property>
+                                    </data>
+                                </cell>
+                                <cell id="57"/>
+                                <cell id="58">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">4</property>
+                                </cell>
+                                <cell id="59"/>
+                                <cell id="60">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">4</property>
+                                </cell>
+                            </row>
+                            <row id="61">
+                                <property name="height">0.21875in</property>
+                                <cell id="65">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">3</property>
+                                    <data id="248">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <property name="resultSetColumn">AlamatBadan</property>
+                                    </data>
+                                </cell>
+                                <cell id="67">
+                                    <data id="249">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <property name="resultSetColumn">NPWPD</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="69">
+                                <property name="height">0.19791666666666666in</property>
+                                <cell id="75">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">2</property>
+                                </cell>
+                            </row>
+                            <row id="77">
+                                <property name="height">0.010416666666666666in</property>
+                            </row>
+                        </grid>
+                        <grid id="88">
+                            <property name="height">3.3072916666666665cm</property>
+                            <column id="89"/>
+                            <row id="90">
+                                <property name="height">3.3072916666666665cm</property>
+                                <cell id="91"/>
+                            </row>
+                        </grid>
+                        <grid id="92">
+                            <property name="height">0.28125in</property>
+                            <property name="width">29.23645833333333cm</property>
+                            <column id="93">
+                                <property name="width">0.13229166666666667cm</property>
+                            </column>
+                            <column id="94">
+                                <property name="width">0.555625cm</property>
+                            </column>
+                            <column id="95">
+                                <property name="width">0.238125cm</property>
+                            </column>
+                            <column id="96">
+                                <property name="width">6.905625cm</property>
+                            </column>
+                            <column id="97">
+                                <property name="width">2.0902083333333334cm</property>
+                            </column>
+                            <column id="98">
+                                <property name="width">1.031875cm</property>
+                            </column>
+                            <column id="99">
+                                <property name="width">0.42333333333333334cm</property>
+                            </column>
+                            <column id="100">
+                                <property name="width">2.38125cm</property>
+                            </column>
+                            <column id="101">
+                                <property name="width">2.6722916666666667cm</property>
+                            </column>
+                            <column id="102">
+                                <property name="width">2.4341666666666666cm</property>
+                            </column>
+                            <column id="103">
+                                <property name="width">0.3175cm</property>
+                            </column>
+                            <column id="104">
+                                <property name="width">1.984375cm</property>
+                            </column>
+                            <column id="105">
+                                <property name="width">0.21166666666666667cm</property>
+                            </column>
+                            <column id="106">
+                                <property name="width">2.5664583333333337cm</property>
+                            </column>
+                            <column id="107">
+                                <property name="width">0.26458333333333334cm</property>
+                            </column>
+                            <column id="108">
+                                <property name="width">2.196041666666667cm</property>
+                            </column>
+                            <column id="109">
+                                <property name="width">0.26458333333333334cm</property>
+                            </column>
+                            <column id="110">
+                                <property name="width">2.5664583333333337cm</property>
+                            </column>
+                            <row id="111">
+                                <property name="height">0.28125in</property>
+                                <cell id="112">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <label id="130">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <text-property name="text">1</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="114"/>
+                                <cell id="115">
+                                    <data id="250">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <property name="resultSetColumn">NamaPajak</property>
+                                    </data>
+                                </cell>
+                                <cell id="116"/>
+                                <cell id="117">
+                                    <data id="251">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">9pt</property>
+                                        <property name="textAlign">center</property>
+                                        <property name="resultSetColumn">Tarif</property>
+                                    </data>
+                                </cell>
+                                <cell id="118"/>
+                                <cell id="119">
+                                    <data id="253">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">9pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">PajakPeriksa</property>
+                                    </data>
+                                </cell>
+                                <cell id="120">
+                                    <data id="254">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">9pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">PajakTerutang</property>
+                                    </data>
+                                </cell>
+                                <cell id="121">
+                                    <data id="255">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">9pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">KurangBayar</property>
+                                    </data>
+                                </cell>
+                                <cell id="122"/>
+                                <cell id="123">
+                                    <data id="256">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">9pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">Kenaikan</property>
+                                    </data>
+                                </cell>
+                                <cell id="124"/>
+                                <cell id="125">
+                                    <data id="257">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">9pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">Denda</property>
+                                    </data>
+                                </cell>
+                                <cell id="126"/>
+                                <cell id="127">
+                                    <data id="258">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">9pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">Bunga</property>
+                                    </data>
+                                </cell>
+                                <cell id="128"/>
+                                <cell id="129">
+                                    <data id="259">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">9pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">Total</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="139">
+                            <property name="height">2.0902083333333334cm</property>
+                            <column id="140"/>
+                            <row id="141">
+                                <property name="height">2.0902083333333334cm</property>
+                                <cell id="142"/>
+                            </row>
+                        </grid>
+                        <grid id="143">
+                            <property name="height">0.25in</property>
+                            <property name="width">29.26291666666667cm</property>
+                            <column id="144">
+                                <property name="width">26.48479166666667cm</property>
+                            </column>
+                            <column id="145">
+                                <property name="width">2.5664583333333337cm</property>
+                            </column>
+                            <column id="146">
+                                <property name="width">0.21166666666666667cm</property>
+                            </column>
+                            <row id="147">
+                                <property name="height">0.25in</property>
+                                <cell id="148"/>
+                                <cell id="149">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="260">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">9pt</property>
+                                        <property name="textAlign">right</property>
+                                        <property name="resultSetColumn">Total</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="152">
+                            <property name="height">7.434791666666667cm</property>
+                            <property name="width">27.80770833333333cm</property>
+                            <column id="153">
+                                <property name="width">11.27125cm</property>
+                            </column>
+                            <column id="154">
+                                <property name="width">16.139583333333334cm</property>
+                            </column>
+                            <column id="155">
+                                <property name="width">0.396875cm</property>
+                            </column>
+                            <row id="156">
+                                <property name="height">7.434791666666667cm</property>
+                                <cell id="157"/>
+                                <cell id="158">
+                                    <data id="261">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <property name="resultSetColumn">Terbilang</property>
+                                    </data>
+                                </cell>
+                                <cell id="159"/>
+                            </row>
+                        </grid>
+                        <grid id="185">
+                            <property name="height">1.42875cm</property>
+                            <property name="width">28.839583333333334cm</property>
+                            <column id="186">
+                                <property name="width">3.96875cm</property>
+                            </column>
+                            <column id="272">
+                                <property name="width">13.440833333333334cm</property>
+                            </column>
+                            <column id="187">
+                                <property name="width">7.037916666666667cm</property>
+                            </column>
+                            <column id="188">
+                                <property name="width">4.418541666666666cm</property>
+                            </column>
+                            <row id="189">
+                                <property name="height">1.42875cm</property>
+                                <cell id="190">
+                                    <label id="269"/>
+                                </cell>
+                                <cell id="271">
+                                    <label id="273"/>
+                                    <data id="274">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">Jabatan2</property>
+                                                <text-property name="displayName">Jabatan2</text-property>
+                                                <expression name="expression" type="javascript">vars["Jabatan2"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">Jabatan2</property>
+                                    </data>
+                                </cell>
+                                <cell id="191">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                    <data id="262">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <property name="resultSetColumn">Tanggal</property>
+                                    </data>
+                                    <data id="275">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">Jabatan1</property>
+                                                <text-property name="displayName">Jabatan1</text-property>
+                                                <expression name="expression" type="javascript">vars["Jabatan1"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">Jabatan1</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="194">
+                            <property name="height">1.3758333333333332cm</property>
+                            <column id="195"/>
+                            <row id="196">
+                                <property name="height">1.3758333333333332cm</property>
+                                <cell id="197"/>
+                            </row>
+                        </grid>
+                        <grid id="198">
+                            <property name="height">1.1145833333333333in</property>
+                            <property name="width">28.019375cm</property>
+                            <column id="199">
+                                <property name="width">3.96875cm</property>
+                            </column>
+                            <column id="200">
+                                <property name="width">7.7787500000000005cm</property>
+                            </column>
+                            <column id="201">
+                                <property name="width">5.662083333333333cm</property>
+                            </column>
+                            <column id="202">
+                                <property name="width">2.9270833333333335in</property>
+                            </column>
+                            <column id="203">
+                                <property name="width">3.175cm</property>
+                            </column>
+                            <row id="204">
+                                <cell id="205">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">3</property>
+                                </cell>
+                                <cell id="206">
+                                    <data id="263">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">Nama2</property>
+                                                <text-property name="displayName">Nama2</text-property>
+                                                <expression name="expression" type="javascript">vars["Nama2"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">Nama2</property>
+                                    </data>
+                                </cell>
+                                <cell id="207">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">3</property>
+                                </cell>
+                                <cell id="208">
+                                    <data id="266">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">Nama1</property>
+                                                <text-property name="displayName">Nama1</text-property>
+                                                <expression name="expression" type="javascript">vars["Nama1"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">Nama1</property>
+                                    </data>
+                                </cell>
+                                <cell id="209">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">3</property>
+                                </cell>
+                            </row>
+                            <row id="210">
+                                <cell id="212">
+                                    <data id="264">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">Pangkat2</property>
+                                                <text-property name="displayName">Pangkat2</text-property>
+                                                <expression name="expression" type="javascript">vars["Pangkat2"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">Pangkat2</property>
+                                    </data>
+                                </cell>
+                                <cell id="214">
+                                    <data id="267">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">Pangkat1</property>
+                                                <text-property name="displayName">Pangkat1</text-property>
+                                                <expression name="expression" type="javascript">vars["Pangkat1"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">Pangkat1</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="216">
+                                <property name="height">0.5625in</property>
+                                <cell id="218">
+                                    <data id="265">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">NIP2</property>
+                                                <text-property name="displayName">NIP2</text-property>
+                                                <expression name="expression" type="javascript">vars["NIP2"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">NIP2</property>
+                                    </data>
+                                </cell>
+                                <cell id="220">
+                                    <data id="268">
+                                        <property name="fontFamily">"Arial"</property>
+                                        <property name="fontSize">10pt</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">NIP1</property>
+                                                <text-property name="displayName">NIP1</text-property>
+                                                <expression name="expression" type="javascript">vars["NIP1"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">NIP1</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="Nama2">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="Pangkat2">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="NIP2">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="Nama1">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="Pangkat1">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="NIP1">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="Jabatan1">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="Jabatan2">
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

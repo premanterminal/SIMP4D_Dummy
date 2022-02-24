@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Pemeriksaan"
+            id="com.dispenda.skpdkb">
+      </category>
+      <view
+            name="Pemeriksaan"
+            icon="icons/pemeriksaan.gif"
+            category="com.dispenda.skpdkb"
+            class="com.dispenda.skpdkb.views.PemeriksaanView"
+            id="com.dispenda.skpdkb.views.PemeriksaanView">
+      </view>
+      <view
+            category="com.dispenda.skpdkb"
+            class="com.dispenda.skpdkb.views.DaftarPemeriksaanView"
+            icon="icons/pemeriksaan.gif"
+            id="com.dispenda.skpdkb.views.DaftarPemeriksaanView"
+            name="Daftar Pemeriksaan">
+      </view>
+      <view
+            category="com.dispenda.skpdkb"
+            class="com.dispenda.skpdkb.views.NotaPerhitunganView"
+            icon="icons/pemeriksaan.gif"
+            id="com.dispenda.skpdkb.views.NotaPerhitunganView"
+            name="Nota Perhitungan">
+      </view>
+      <view
+            category="com.dispenda.skpdkb"
+            class="com.dispenda.skpdkb.views.SKPDKBView"
+            icon="icons/pemeriksaan.gif"
+            id="com.dispenda.skpdkb.views.SKPDKBView"
+            name="SKPDKB">
+      </view>
+      <view
+            category="com.dispenda.skpdkb"
+            class="com.dispenda.skpdkb.views.RekomendasiPeriksaView"
+            icon="icons/pemeriksaan.gif"
+            id="com.dispenda.skpdkb.views.RekomendasiPeriksaView"
+            name="Rekomendasi Periksa">
+      </view>
+      <view
+            category="com.dispenda.skpdkb"
+            class="com.dispenda.skpdkb.views.DaftarPemeriksaanKeuanganView"
+            icon="icons/pemeriksaan.gif"
+            id="com.dispenda.skpdkb.views.DaftarPemeriksaanKeuanganView"
+            name="Daftar Pemeriksaan Keuangan">
+      </view>
+	  <view
+            category="com.dispenda.skpdkb"
+            class="com.dispenda.skpdkb.views.InputSKPDLBCovView"
+            icon="icons/pemeriksaan.gif"
+            id="com.dispenda.skpdkb.views.InputSKPDLBCovView"
+            name="Input SKPDLB (Covid-19)">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="com.dispenda.skpdkb.views.PemeriksaanView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>

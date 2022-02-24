@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Arsip Category"
+            id="com.dispenda.arsip">
+      </category>
+      <view
+            name="List Barcode View"
+            icon="icons/sample.gif"
+            category="com.dispenda.arsip"
+            class="com.dispenda.arsip.views.ListBarcodePrintView"
+            id="com.dispenda.arsip.views.ListBarcodePrintView">
+      </view>
+      <view
+            category="com.dispenda.arsip"
+            class="com.dispenda.arsip.views.ArsipView"
+            icon="icons/sample.gif"
+            id="com.dispenda.arsip.views.ArsipView"
+            name="Arsip View">
+      </view>
+      <view
+            category="com.dispenda.arsip"
+            class="com.dispenda.arsip.views.VerifikasiDataArsipView"
+            icon="icons/sample.gif"
+            id="com.dispenda.arsip.views.VerifikasiDataArsipView"
+            name="Verifikasi Data">
+      </view>
+      <view
+            category="com.dispenda.arsip"
+            class="com.dispenda.arsip.views.ArsipTransactionView"
+            icon="icons/sample.gif"
+            id="com.dispenda.arsip.views.ArsipTransactionView"
+            name="Keluar Masuk Dokumen">
+      </view>
+      <view
+            category="com.dispenda.arsip"
+            class="com.dispenda.arsip.views.ImageBarcodeToDatabaseView"
+            icon="icons/sample.gif"
+            id="com.dispenda.arsip.views.ImageBarcodeToDatabaseView"
+            name="Berkas Arsip">
+      </view>
+   </extension>
+
+</plugin>

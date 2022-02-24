@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="com.dispenda.pendaftaran">
+      </category>
+      <view
+            name="Pendaftaran"
+            icon="icons/pendaftaran.gif"
+            category="com.dispenda.pendaftaran"
+            class="com.dispenda.pendaftaran.views.PendaftaranView"
+            id="com.dispenda.pendaftaran.views.PendaftaranView">
+      </view>
+      <view
+            category="com.dispenda.pendaftaran"
+            class="com.dispenda.pendaftaran.views.TerimaPendaftaranView"
+            icon="icons/antrian.gif"
+            id="com.dispenda.pendaftaran.views.TerimaPendaftaranView"
+            name="Antrian">
+      </view>
+      <view
+            category="com.dispenda.pendaftaran"
+            class="com.dispenda.pendaftaran.views.TerimaPendaftaranView2"
+            icon="icons/antrian.gif"
+            id="com.dispenda.pendaftaran.views.TerimaPendaftaranView2"
+            name="Antrian">
+      </view>
+      <view
+            category="com.dispenda.pendaftaran"
+            class="com.dispenda.pendaftaran.views.CariPendaftaranView"
+            icon="icons/pemeriksaan.gif"
+            id="com.dispenda.pendaftaran.views.CariPendaftaranView"
+            name="Cari Wajib Pajak">
+      </view>
+      <view
+            category="com.dispenda.pendaftaran"
+            class="com.dispenda.pendaftaran.views.DataWajibPajakView"
+            icon="icons/pendaftaran.gif"
+            id="com.dispenda.pendaftaran.views.DataWajibPajakView"
+            name="Data Wajib Pajak">
+      </view>
+      <view
+            category="com.dispenda.pendaftaran"
+            class="com.dispenda.pendaftaran.views.CekLokasiReklame"
+            icon="icons/pemeriksaan.gif"
+            id="com.dispenda.pendaftaran.views.CekLokasiReklame"
+            name="Cek Lokasi Reklame">
+      </view>
+   </extension>
+    <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Pendaftaran Perspective"
+            class="com.dispenda.pendaftaran.perspectives.PendaftaranPerspective"
+            id="com.dispenda.pendaftaran.perspectives.PendaftaranPerspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="com.dispenda.pendaftaran.views.SampleView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>

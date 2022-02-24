@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="com.dispenda.laporan">
+      </category>
+      <view
+            name="Laporan Pendapatan Bulanan"
+            icon="icons/laporan.gif"
+            category="com.dispenda.laporan"
+            class="com.dispenda.laporan.views.LaporanPendapatanBulananView"
+            id="com.dispenda.laporan.views.LaporanPendapatanBulananView">
+      </view>
+      <view
+            category="com.dispenda.laporan"
+            class="com.dispenda.laporan.views.LaporanSptpdView"
+            icon="icons/laporan.gif"
+            id="com.dispenda.laporan.views.LaporanSptpdView"
+            name="Laporan SPTPD">
+      </view>
+      <view
+            category="com.dispenda.laporan"
+            class="com.dispenda.laporan.views.LaporanPendapatanHarianView"
+            icon="icons/laporan.gif"
+            id="com.dispenda.laporan.views.LaporanPendapatanHarianView"
+            name="Laporan Pendapatan Harian">
+      </view>
+      <view
+            category="com.dispenda.laporan"
+            class="com.dispenda.laporan.views.LaporanDendaSSPD"
+            icon="icons/laporan.gif"
+            id="com.dispenda.laporan.views.LaporanDendaSSPD"
+            name="Laporan Denda">
+      </view>
+      <view
+            category="com.dispenda.laporan"
+            class="com.dispenda.laporan.views.HistoryWPView"
+            icon="icons/laporan.gif"
+            id="com.dispenda.laporan.views.HistoryWPView"
+            name="History WP">
+      </view>
+      <view
+            category="com.dispenda.laporan"
+            class="com.dispenda.laporan.views.LaporanKeuanganView"
+            icon="icons/laporan.gif"
+            id="com.dispenda.laporan.views.LaporanKeuanganView"
+            name="Keuangan">
+      </view>
+      <view
+            category="com.dispenda.laporan"
+            class="com.dispenda.laporan.views.LaporanKeuanganHarianView"
+            icon="icons/laporan.gif"
+            id="com.dispenda.laporan.views.LaporanKeuanganHarianView"
+            name="Keuangan Harian">
+      </view>
+      <view
+            category="com.dispenda.laporan"
+            class="com.dispenda.laporan.views.LaporanPiutang"
+            icon="icons/laporan.gif"
+            id="com.dispenda.laporan.views.LaporanPiutang"
+            name="Laporan Piutang">
+      </view>
+   </extension>
+
+</plugin>

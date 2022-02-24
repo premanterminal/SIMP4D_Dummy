@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.1.v20110905 Build &lt;3.7.1.v20110905-1820></property>
+    <property name="units">in</property>
+    <method name="onPrepare"><![CDATA[varn = reportContext.getAppContext().get("Variable");
+vars["tahun"] = varn.get("tahun");
+vars["Perihal"] = varn.get("perihal");
+vars["noUrut"] = varn.get("noUrut");
+vars["nomor"] = varn.get("nomor");
+vars["jlhWP"] = varn.get("jlhWP");
+vars["jlhPajak"] = varn.get("jlhPajak");
+vars["point2"] = varn.get("point2");
+vars["penandatangan"] = varn.get("penandatangan");
+vars["jabatan"] = varn.get("jabatan");
+vars["nip"] = varn.get("nip");
+vars["Bidang"] = varn.get("Bidang");]]></method>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <script-data-source name="Data Source" id="154"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="dsNota" id="155">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">noUrut</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">jumlahWP</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">jumlahPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">pajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">noUrut</property>
+                </structure>
+                <structure>
+                    <property name="columnName">jumlahWP</property>
+                </structure>
+                <structure>
+                    <property name="columnName">jumlahPajak</property>
+                </structure>
+                <structure>
+                    <property name="columnName">pajak</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">noUrut</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">jumlahWP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">jumlahPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">pajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <method name="open"><![CDATA[importPackage(Packages.org.eclipse.core.runtime);
+count = 0;
+
+map = reportContext.getAppContext().get("NotaSKPD");]]></method>
+            <method name="fetch"><![CDATA[if(count<map.size()){
+	row["noUrut"] = map.get(""+count).get(0);
+	row["pajak"] = map.get(""+count).get(1);
+	row["jumlahWP"] = map.get(""+count).get(2);
+    row["jumlahPajak"] = map.get(""+count).get(3);
+	count++;
+	return true;
+}
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">us-legal</property>
+            <property name="topMargin">0.75in</property>
+            <property name="leftMargin">0.75in</property>
+            <property name="rightMargin">0.5in</property>
+            <property name="showFooterOnLast">false</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <data id="218">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">16pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textAlign">center</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Bidang</property>
+                    <text-property name="displayName">Bidang</text-property>
+                    <expression name="expression" type="javascript">"BIDANG " + vars["Bidang"].toUpperCase()</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">Bidang</property>
+        </data>
+        <label id="153">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">15pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textUnderline">none</property>
+            <property name="borderBottomColor">#000000</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">thin</property>
+            <property name="paddingBottom">1pt</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">BADAN PENGELOLA PAJAK DAN RETRIBUSI DAERAH KOTA MEDAN</text-property>
+        </label>
+        <label id="7">
+            <property name="fontFamily">"Times New Roman"</property>
+            <property name="fontSize">14pt</property>
+            <property name="fontWeight">bold</property>
+            <property name="textUnderline">underline</property>
+            <property name="paddingTop">40pt</property>
+            <property name="paddingBottom">20pt</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">NOTA DINAS</text-property>
+        </label>
+        <grid id="8">
+            <property name="height">2.7083333333333335in</property>
+            <property name="width">6.9375in</property>
+            <column id="9">
+                <property name="width">1.3854166666666667in</property>
+            </column>
+            <column id="144">
+                <property name="width">0.15625in</property>
+            </column>
+            <column id="10">
+                <property name="width">5.395833333333333in</property>
+            </column>
+            <row id="11">
+                <property name="height">0.2916666666666667in</property>
+                <cell id="12">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="32">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">Kepada Yth.</text-property>
+                    </label>
+                </cell>
+                <cell id="137">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="145">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="13">
+                    <label id="39">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Kepala Badan Pengelola Pajak dan Retribusi Daerah Kota Medan</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="14">
+                <property name="height">0.3854166666666667in</property>
+                <cell id="15">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="33">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">Dari</text-property>
+                    </label>
+                </cell>
+                <cell id="138">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="146">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="16">
+                    <data id="219">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Bidang</property>
+                                <text-property name="displayName">Bidang</text-property>
+                                <expression name="expression" type="javascript">"Kepala Bidang " + vars["Bidang"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Bidang</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="17">
+                <property name="height">0.28125in</property>
+                <cell id="18">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="34">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">Nomor</text-property>
+                    </label>
+                </cell>
+                <cell id="139">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="147">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="19"/>
+            </row>
+            <row id="20">
+                <property name="height">0.28125in</property>
+                <cell id="21">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="35">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">Tanggal</text-property>
+                    </label>
+                </cell>
+                <cell id="140">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="148">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="22">
+                    <data id="42">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="paddingLeft">100pt</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">tahun</property>
+                                <text-property name="displayName">tahun</text-property>
+                                <expression name="expression" type="javascript">vars["tahun"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">tahun</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="23">
+                <property name="height">0.28125in</property>
+                <cell id="24">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="36">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">Sifat</text-property>
+                    </label>
+                </cell>
+                <cell id="141">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="149">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="25">
+                    <label id="43">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">Biasa</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="26">
+                <property name="height">0.28125in</property>
+                <cell id="27">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="37">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">Lampiran</text-property>
+                    </label>
+                </cell>
+                <cell id="142">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="150">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="28">
+                    <label id="44">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">1 (satu) Berkas</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="29">
+                <property name="height">0.90625in</property>
+                <cell id="30">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="38">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">Perihal</text-property>
+                    </label>
+                </cell>
+                <cell id="143">
+                    <property name="fontFamily">"Times New Roman"</property>
+                    <property name="fontSize">11pt</property>
+                    <label id="151">
+                        <property name="fontSize">12pt</property>
+                        <text-property name="text">:</text-property>
+                    </label>
+                </cell>
+                <cell id="31">
+                    <data id="46">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">bold</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Perihal</property>
+                                <text-property name="displayName">Perihal</text-property>
+                                <expression name="expression" type="javascript">vars["Perihal"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Perihal</property>
+                    </data>
+                    <label id="47">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="paddingBottom">40pt</property>
+                        <text-property name="text">--------------------------------------------------------------------------------------------</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <grid id="212">
+            <property name="width">6.947916666666667in</property>
+            <column id="213">
+                <property name="width">0.6875in</property>
+            </column>
+            <column id="214">
+                <property name="width">6.260416666666667in</property>
+            </column>
+            <row id="215">
+                <cell id="216">
+                    <label id="83">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">1.</text-property>
+                    </label>
+                </cell>
+                <cell id="217">
+                    <data id="85">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="paddingBottom">15pt</property>
+                        <property name="textAlign">justify</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Perihal</property>
+                                <text-property name="displayName">Perihal</text-property>
+                                <expression name="expression" type="javascript">"Dalam rangka tertib administrasi pengelolaan Pajak Daerah, terlampir kami sampaikan kepada Bapak 1 (satu) berkas " + vars["Perihal"] + ", yang terdiri dari:"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Perihal</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+        <table id="178">
+            <property name="marginLeft">50pt</property>
+            <property name="textAlign">left</property>
+            <property name="canShrink">true</property>
+            <property name="height">100%</property>
+            <property name="width">6.270833333333333in</property>
+            <property name="dataSet">dsNota</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">noUrut</property>
+                    <text-property name="displayName">noUrut</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["noUrut"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">jumlahWP</property>
+                    <text-property name="displayName">jumlahWP</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["jumlahWP"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">jumlahPajak</property>
+                    <text-property name="displayName">jumlahPajak</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["jumlahPajak"]</expression>
+                    <property name="dataType">float</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation</property>
+                    <text-property name="displayName">sumWP</text-property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["jumlahWP"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">Aggregation_1</property>
+                    <text-property name="displayName">sumTotal</text-property>
+                    <property name="dataType">float</property>
+                    <property name="aggregateFunction">SUM</property>
+                    <list-property name="arguments">
+                        <structure>
+                            <property name="name">Expression</property>
+                            <expression name="value" type="javascript">row["jumlahPajak"]</expression>
+                        </structure>
+                    </list-property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">pajak</property>
+                    <text-property name="displayName">pajak</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["pajak"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="191">
+                <property name="width">1.2395833333333333in</property>
+            </column>
+            <column id="209">
+                <property name="width">2.5520833333333335in</property>
+            </column>
+            <column id="192">
+                <property name="width">0.9166666666666666in</property>
+            </column>
+            <column id="193">
+                <property name="width">1.5625in</property>
+            </column>
+            <header>
+                <row id="179">
+                    <property name="textAlign">center</property>
+                    <cell id="180">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="87">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">bold</property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">noUrut</property>
+                                    <text-property name="displayName">noUrut</text-property>
+                                    <expression name="expression" type="javascript">"No. Urut"</expression>
+                                    <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                            </list-property>
+                            <property name="resultSetColumn">noUrut</property>
+                        </data>
+                    </cell>
+                    <cell id="206">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="210">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Pajak</text-property>
+                        </label>
+                    </cell>
+                    <cell id="181">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="195">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Jumlah WP</text-property>
+                        </label>
+                    </cell>
+                    <cell id="182">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="197">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">bold</property>
+                            <text-property name="text">Jumlah Pajak</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="183">
+                    <cell id="184">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="194">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">noUrut</property>
+                        </data>
+                    </cell>
+                    <cell id="207">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="211">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="resultSetColumn">pajak</property>
+                        </data>
+                    </cell>
+                    <cell id="185">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="196">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">jumlahWP</property>
+                        </data>
+                    </cell>
+                    <cell id="186">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="198">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Custom</property>
+                                <property name="pattern">###,##0.00</property>
+                                <property name="locale">id_ID</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">jumlahPajak</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="187">
+                    <cell id="188">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <label id="205">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Jumlah</text-property>
+                        </label>
+                    </cell>
+                    <cell id="208">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                    </cell>
+                    <cell id="189">
+                        <property name="fontSize">12pt</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <property name="textAlign">center</property>
+                        <data id="203">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="resultSetColumn">Aggregation</property>
+                        </data>
+                    </cell>
+                    <cell id="190">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">thin</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">thin</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">thin</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">thin</property>
+                        <data id="204">
+                            <property name="fontFamily">"Times New Roman"</property>
+                            <property name="fontSize">12pt</property>
+                            <structure name="numberFormat">
+                                <property name="category">Custom</property>
+                                <property name="pattern">###,##0.00</property>
+                                <property name="locale">id_ID</property>
+                            </structure>
+                            <property name="textAlign">right</property>
+                            <property name="resultSetColumn">Aggregation_1</property>
+                        </data>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+        <grid id="48">
+            <property name="height">6.395833333333333in</property>
+            <property name="width">6.916666666666667in</property>
+            <column id="49">
+                <property name="width">0.6875in</property>
+            </column>
+            <column id="50">
+                <property name="width">1.65625in</property>
+            </column>
+            <column id="51">
+                <property name="width">1.28125in</property>
+            </column>
+            <column id="52">
+                <property name="width">3.2916666666666665in</property>
+            </column>
+            <row id="73">
+                <cell id="74">
+                    <label id="96">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="paddingTop">15pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">2.</text-property>
+                    </label>
+                </cell>
+                <cell id="75">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                    <data id="98">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="paddingTop">15pt</property>
+                        <property name="textAlign">justify</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">point2</property>
+                                <text-property name="displayName">point2</text-property>
+                                <expression name="expression" type="javascript">vars["point2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">point2</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="78">
+                <cell id="79">
+                    <label id="99">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="paddingTop">15pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">3.</text-property>
+                    </label>
+                </cell>
+                <cell id="80">
+                    <property name="colSpan">3</property>
+                    <property name="rowSpan">1</property>
+                    <text id="100">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="paddingTop">15pt</property>
+                        <property name="paddingBottom">50pt</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[Demikian disampaikan dan mohon arahan Bapak selanjutnya.]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="101">
+                <cell id="102"/>
+                <cell id="103"/>
+                <cell id="104">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text id="228">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[KEPALA BIDANG HOTEL, RESTORAN DAN HIBURAN]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="107">
+                <cell id="108"/>
+                <cell id="109"/>
+                <cell id="110">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text id="223">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[BADAN PENGELOLA PAJAK DAN RETRIBUSI DAERAH 
+KOTA MEDAN]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="118">
+                <property name="height">0.75in</property>
+                <cell id="119"/>
+                <cell id="120"/>
+                <cell id="121">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+            </row>
+            <row id="128">
+                <cell id="129"/>
+                <cell id="130"/>
+                <cell id="131">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+                <cell id="225">
+                    <data id="133">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">13pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">penandatangan</property>
+                                <text-property name="displayName">penandatangan</text-property>
+                                <expression name="expression" type="javascript">vars["penandatangan"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">penandatangan</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="113">
+                <cell id="114"/>
+                <cell id="115"/>
+                <cell id="116">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+                <cell id="226">
+                    <data id="134">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">13pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">jabatan</property>
+                                <text-property name="displayName">jabatan</text-property>
+                                <expression name="expression" type="javascript">vars["jabatan"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">jabatan</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="123">
+                <cell id="124"/>
+                <cell id="125"/>
+                <cell id="126">
+                    <property name="colSpan">1</property>
+                    <property name="rowSpan">1</property>
+                </cell>
+                <cell id="227">
+                    <data id="135">
+                        <property name="fontFamily">"Times New Roman"</property>
+                        <property name="fontSize">13pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">left</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">nip</property>
+                                <text-property name="displayName">nip</text-property>
+                                <expression name="expression" type="javascript">"Nip: " + vars["nip"]</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">nip</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="tahun">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="Perihal">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="noUrut">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="nomor">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="jlhWP">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="jlhPajak">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="point2">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="penandatangan">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="jabatan">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="nip">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="Bidang">
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

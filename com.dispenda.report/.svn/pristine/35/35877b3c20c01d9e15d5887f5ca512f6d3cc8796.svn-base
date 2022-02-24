@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.1.v20110905 Build &lt;3.7.1.v20110905-1820></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <script-data-source name="Data Source" id="19"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="Data Set" id="20">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">NoPendaftaran</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">NamaBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">AlamatBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">KelurahanBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">KecamatanBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">NoTelpBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">KodePosBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">SuratIzinUsaha</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">NamaPemilik</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">Jabatan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">AlamatTinggal</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">KelurahanTinggal</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">KecamatanTinggal</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">KabupatenTinggal</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">NoTelpTinggal</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">KodePosTinggal</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">TanggalDaftar</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">NoPendaftaran</property>
+                    <text-property name="displayName">NoPendaftaran</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NamaBadan</property>
+                    <text-property name="displayName">NamaBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AlamatBadan</property>
+                    <text-property name="displayName">AlamatBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KelurahanBadan</property>
+                    <text-property name="displayName">KelurahanBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KecamatanBadan</property>
+                    <text-property name="displayName">KecamatanBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NoTelpBadan</property>
+                    <text-property name="displayName">NoTelpBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KodePosBadan</property>
+                    <text-property name="displayName">KodePosBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SuratIzinUsaha</property>
+                    <text-property name="displayName">SuratIzinUsaha</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NamaPemilik</property>
+                    <text-property name="displayName">NamaPemilik</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Jabatan</property>
+                    <text-property name="displayName">Jabatan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AlamatTinggal</property>
+                    <text-property name="displayName">AlamatTinggal</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KelurahanTinggal</property>
+                    <text-property name="displayName">KelurahanTinggal</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KecamatanTinggal</property>
+                    <text-property name="displayName">KecamatanTinggal</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KabupatenTinggal</property>
+                    <text-property name="displayName">KabupatenTinggal</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NoTelpTinggal</property>
+                    <text-property name="displayName">NoTelpTinggal</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KodePosTinggal</property>
+                    <text-property name="displayName">KodePosTinggal</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TanggalDaftar</property>
+                    <text-property name="displayName">TanggalDaftar</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">NoPendaftaran</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">NamaBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">AlamatBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">KelurahanBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">KecamatanBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">NoTelpBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">KodePosBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">SuratIzinUsaha</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">NamaPemilik</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">Jabatan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">AlamatTinggal</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">KelurahanTinggal</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">KecamatanTinggal</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">KabupatenTinggal</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">NoTelpTinggal</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">KodePosTinggal</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">TanggalDaftar</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <method name="open"><![CDATA[importPackage(Packages.org.eclipse.core.runtime);
+count = 0;
+
+map = reportContext.getAppContext().get("FormulirPendaftaranBadan");]]></method>
+            <method name="fetch"><![CDATA[if(count<map.size()){
+	row["NamaBadan"] = map.get("NamaBadan");
+	row["AlamatBadan"] = map.get("AlamatBadan");
+	row["NamaPemilik"] = map.get("NamaPemilik");
+	row["TanggalDaftar"] = map.get("TanggalDaftar");
+	row["AlamatTinggal"] = map.get("AlamatTinggal");
+	row["KelurahanTinggal"] = map.get("KelurahanTinggal");
+	row["KecamatanTinggal"] = map.get("KecamatanTinggal");
+	row["KabupatenTinggal"] = map.get("KabupatenTinggal");
+	row["NoTelpTinggal"] = map.get("NoTelpTinggal");
+	row["KodePosTinggal"] = map.get("KodePosTinggal");
+	row["KelurahanBadan"] = map.get("KelurahanBadan");
+	row["KecamatanBadan"] = map.get("KecamatanBadan");
+	row["KodePosBadan"] = map.get("KodePosBadan");
+	row["NoTelpBadan"] = map.get("NoTelpBadan");
+	row["Jabatan"] = map.get("Jabatan");
+	row["SuratIzinUsaha"] = map.get("SuratIzinUsaha");
+	row["NoPendaftaran"] = map.get("NoPendaftaran");
+	count++;
+	return true;
+}
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="height">28in</property>
+            <property name="width">8.5in</property>
+            <property name="orientation">portrait</property>
+            <property name="leftMargin">1.0208333333333333in</property>
+            <property name="rightMargin">0.96875in</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="302">
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">NoPendaftaran</property>
+                    <text-property name="displayName">NoPendaftaran</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NoPendaftaran"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NamaBadan</property>
+                    <text-property name="displayName">NamaBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NamaBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AlamatBadan</property>
+                    <text-property name="displayName">AlamatBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["AlamatBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KelurahanBadan</property>
+                    <text-property name="displayName">KelurahanBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KelurahanBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KecamatanBadan</property>
+                    <text-property name="displayName">KecamatanBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KecamatanBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NoTelpBadan</property>
+                    <text-property name="displayName">NoTelpBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NoTelpBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KodePosBadan</property>
+                    <text-property name="displayName">KodePosBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KodePosBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">SuratIzinUsaha</property>
+                    <text-property name="displayName">SuratIzinUsaha</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SuratIzinUsaha"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NamaPemilik</property>
+                    <text-property name="displayName">NamaPemilik</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NamaPemilik"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Jabatan</property>
+                    <text-property name="displayName">Jabatan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Jabatan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AlamatTinggal</property>
+                    <text-property name="displayName">AlamatTinggal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["AlamatTinggal"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KelurahanTinggal</property>
+                    <text-property name="displayName">KelurahanTinggal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KelurahanTinggal"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KecamatanTinggal</property>
+                    <text-property name="displayName">KecamatanTinggal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KecamatanTinggal"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KabupatenTinggal</property>
+                    <text-property name="displayName">KabupatenTinggal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KabupatenTinggal"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NoTelpTinggal</property>
+                    <text-property name="displayName">NoTelpTinggal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NoTelpTinggal"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KodePosTinggal</property>
+                    <text-property name="displayName">KodePosTinggal</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KodePosTinggal"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TanggalDaftar</property>
+                    <text-property name="displayName">TanggalDaftar</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["TanggalDaftar"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="309"/>
+            <detail>
+                <row id="305">
+                    <cell id="306">
+                        <grid id="7">
+                            <property name="height">1.6458333333333333in</property>
+                            <property name="width">6.441666666666666in</property>
+                            <column id="8">
+                                <property name="width">4.770833333333333in</property>
+                            </column>
+                            <column id="9">
+                                <property name="width">1.2833333333333334in</property>
+                            </column>
+                            <column id="10">
+                                <property name="width">0.39166666666666666in</property>
+                            </column>
+                            <row id="11">
+                                <property name="height">1.4791666666666667in</property>
+                                <cell id="12">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">2</property>
+                                </cell>
+                                <cell id="13"/>
+                                <cell id="14">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">2</property>
+                                </cell>
+                            </row>
+                            <row id="15">
+                                <cell id="17">
+                                    <data id="21">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">NoPendaftaran</property>
+                                                <text-property name="displayName">NoPendaftaran</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["NoPendaftaran"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">NoPendaftaran</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="37">
+                            <property name="height">6.916666666666667in</property>
+                            <property name="width">6.441666666666666in</property>
+                            <column id="38">
+                                <property name="width">3.6145833333333335in</property>
+                            </column>
+                            <column id="39">
+                                <property name="width">2.8333333333333335in</property>
+                            </column>
+                            <row id="40">
+                                <property name="height">4.375in</property>
+                                <cell id="41">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">10</property>
+                                </cell>
+                                <cell id="42"/>
+                            </row>
+                            <row id="43">
+                                <cell id="45">
+                                    <data id="70">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">NamaBadan</property>
+                                                <text-property name="displayName">NamaBadan</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["NamaBadan"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">NamaBadan</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="46">
+                                <property name="height">0.84375in</property>
+                                <cell id="48"/>
+                            </row>
+                            <row id="49">
+                                <cell id="51">
+                                    <data id="71">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">KelurahanBadan</property>
+                                                <text-property name="displayName">KelurahanBadan</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["KelurahanBadan"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">KelurahanBadan</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="52">
+                                <cell id="54">
+                                    <data id="72">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">KecamatanBadan</property>
+                                                <text-property name="displayName">KecamatanBadan</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["KecamatanBadan"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">KecamatanBadan</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="55">
+                                <cell id="57">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">3</property>
+                                </cell>
+                            </row>
+                            <row id="58"/>
+                            <row id="61">
+                                <property name="height">0.3333333333333333in</property>
+                            </row>
+                            <row id="64">
+                                <property name="height">0.2916666666666667in</property>
+                                <cell id="66">
+                                    <data id="73">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">NoTelpBadan</property>
+                                                <text-property name="displayName">NoTelpBadan</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["NoTelpBadan"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">NoTelpBadan</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="67">
+                                <property name="height">0.23958333333333334in</property>
+                                <cell id="69">
+                                    <data id="74">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">KodePosBadan</property>
+                                                <text-property name="displayName">KodePosBadan</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["KodePosBadan"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">KodePosBadan</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="75">
+                            <property name="height">1.5104166666666667in</property>
+                            <column id="76"/>
+                            <column id="77"/>
+                            <row id="78">
+                                <property name="height">0.7916666666666666in</property>
+                                <cell id="79">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                </cell>
+                            </row>
+                            <row id="81">
+                                <property name="height">0.71875in</property>
+                                <cell id="82"/>
+                                <cell id="83">
+                                    <data id="84">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">SuratIzinUsaha</property>
+                                                <text-property name="displayName">SuratIzinUsaha</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["SuratIzinUsaha"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">SuratIzinUsaha</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="85">
+                            <property name="height">0.59375in</property>
+                            <property name="width">6.433333333333334in</property>
+                            <column id="86">
+                                <property name="width">4.989583333333333in</property>
+                            </column>
+                            <column id="87">
+                                <property name="width">0.3125in</property>
+                            </column>
+                            <column id="88">
+                                <property name="width">1.1333333333333333in</property>
+                            </column>
+                            <row id="89">
+                                <property name="height">0.2708333333333333in</property>
+                                <cell id="90"/>
+                                <cell id="91"/>
+                                <cell id="92"/>
+                            </row>
+                            <row id="93">
+                                <property name="height">0.3229166666666667in</property>
+                                <cell id="94">
+                                    <label id="101">
+                                        <text-property name="text">4. Bidang Usaha (Harap diisi sesuai dengan bidang usahanya)</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="95"/>
+                                <cell id="96"/>
+                            </row>
+                        </grid>
+                        <grid id="146">
+                            <property name="height">4.979166666666667in</property>
+                            <property name="width">6.408333333333333in</property>
+                            <column id="147">
+                                <property name="width">4.479166666666667in</property>
+                            </column>
+                            <column id="148">
+                                <property name="width">1.9333333333333333in</property>
+                            </column>
+                            <row id="149">
+                                <property name="height">4.8125in</property>
+                                <cell id="150">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                </cell>
+                            </row>
+                            <row id="152">
+                                <cell id="153"/>
+                                <cell id="154">
+                                    <data id="155">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">NamaPemilik</property>
+                                                <text-property name="displayName">NamaPemilik</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["NamaPemilik"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">NamaPemilik</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="156">
+                            <property name="height">2.3229166666666665in</property>
+                            <column id="157"/>
+                            <column id="158"/>
+                            <row id="159">
+                                <cell id="160">
+                                    <property name="colSpan">1</property>
+                                    <property name="rowSpan">8</property>
+                                </cell>
+                                <cell id="161">
+                                    <data id="183">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">Jabatan</property>
+                                                <text-property name="displayName">Jabatan</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["Jabatan"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">Jabatan</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="162">
+                                <property name="height">0.28125in</property>
+                                <cell id="164"/>
+                            </row>
+                            <row id="165">
+                                <property name="height">0.4583333333333333in</property>
+                                <cell id="167">
+                                    <data id="184">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">AlamatTinggal</property>
+                                                <text-property name="displayName">AlamatTinggal</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["AlamatTinggal"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">AlamatTinggal</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="168">
+                                <cell id="170">
+                                    <data id="185">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">KelurahanTinggal</property>
+                                                <text-property name="displayName">KelurahanTinggal</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["KelurahanTinggal"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">KelurahanTinggal</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="171">
+                                <property name="height">0.28125in</property>
+                                <cell id="173">
+                                    <data id="186">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">KecamatanTinggal</property>
+                                                <text-property name="displayName">KecamatanTinggal</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["KecamatanTinggal"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">KecamatanTinggal</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="174">
+                                <property name="height">0.22916666666666666in</property>
+                                <cell id="176">
+                                    <data id="187">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">KabupatenTinggal</property>
+                                                <text-property name="displayName">KabupatenTinggal</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["KabupatenTinggal"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">KabupatenTinggal</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="177">
+                                <property name="height">0.23958333333333334in</property>
+                                <cell id="179">
+                                    <data id="188">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">NoTelpTinggal</property>
+                                                <text-property name="displayName">NoTelpTinggal</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["NoTelpTinggal"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">NoTelpTinggal</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="180">
+                                <property name="height">0.28125in</property>
+                                <cell id="182">
+                                    <data id="189">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">KodePosTinggal</property>
+                                                <text-property name="displayName">KodePosTinggal</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["KodePosTinggal"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">KodePosTinggal</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="192">
+                            <property name="height">0.5208333333333334in</property>
+                            <column id="193"/>
+                            <row id="194">
+                                <property name="height">0.5208333333333334in</property>
+                                <cell id="195">
+                                    <label id="196">
+                                        <text-property name="text">8. Kewajiban Pajak Retribusi Daerah</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="197">
+                            <property name="height">1.3854166666666667in</property>
+                            <property name="width">6.458333333333333in</property>
+                            <column id="198">
+                                <property name="width">0.2708333333333333in</property>
+                            </column>
+                            <column id="199">
+                                <property name="width">0.2708333333333333in</property>
+                            </column>
+                            <column id="200">
+                                <property name="width">2.4166666666666665in</property>
+                            </column>
+                            <column id="201">
+                                <property name="width">0.2916666666666667in</property>
+                            </column>
+                            <column id="202">
+                                <property name="width">3.2083333333333335in</property>
+                            </column>
+                            <row id="203">
+                                <cell id="204"/>
+                                <cell id="205">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="206">
+                                    <label id="233">
+                                        <text-property name="text">Pajak Hotel</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="207">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="208">
+                                    <label id="238">
+                                        <text-property name="text">Retribusi Kebersihan</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                            <row id="209">
+                                <cell id="210"/>
+                                <cell id="211">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="212">
+                                    <label id="234">
+                                        <text-property name="text">Pajak Restoran</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="213">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="214">
+                                    <label id="239">
+                                        <text-property name="text">Retribusi Pasar Grosir &amp; Pertokoan</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                            <row id="215">
+                                <cell id="216"/>
+                                <cell id="217">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="218">
+                                    <label id="235">
+                                        <text-property name="text">Pajak Hiburan</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="219">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="220">
+                                    <label id="240">
+                                        <text-property name="text">Retribusi Pasar</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                            <row id="221">
+                                <cell id="222"/>
+                                <cell id="223">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="224">
+                                    <label id="236">
+                                        <text-property name="text">Pajak-Pajak Reklame</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="225">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="226">
+                                    <label id="241">
+                                        <text-property name="text">Retribusi ......................................</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                            <row id="227">
+                                <property name="height">0.2916666666666667in</property>
+                                <cell id="228"/>
+                                <cell id="229">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="230">
+                                    <label id="237">
+                                        <text-property name="text">Pajak Penerangan Jalan</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="231">
+                                    <property name="borderBottomColor">#000000</property>
+                                    <property name="borderBottomStyle">solid</property>
+                                    <property name="borderLeftColor">#000000</property>
+                                    <property name="borderLeftStyle">solid</property>
+                                    <property name="borderRightColor">#000000</property>
+                                    <property name="borderRightStyle">solid</property>
+                                    <property name="borderTopColor">#000000</property>
+                                    <property name="borderTopStyle">solid</property>
+                                </cell>
+                                <cell id="232">
+                                    <label id="242">
+                                        <text-property name="text">Retribusi ......................................</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="243">
+                            <property name="height">1.0729166666666667in</property>
+                            <property name="width">6.458333333333333in</property>
+                            <column id="244">
+                                <property name="width">4.229166666666667in</property>
+                            </column>
+                            <column id="245">
+                                <property name="width">2.2291666666666665in</property>
+                            </column>
+                            <row id="246">
+                                <cell id="247"/>
+                                <cell id="248"/>
+                            </row>
+                            <row id="249">
+                                <property name="height">0.90625in</property>
+                                <cell id="250"/>
+                                <cell id="251">
+                                    <data id="252">
+                                        <property name="dataSet">Data Set</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">TanggalDaftar</property>
+                                                <text-property name="displayName">TanggalDaftar</text-property>
+                                                <expression name="expression" type="javascript">dataSetRow["TanggalDaftar"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                        </list-property>
+                                        <property name="resultSetColumn">TanggalDaftar</property>
+                                    </data>
+                                </cell>
+                            </row>
+                        </grid>
+                        <label id="253">
+                            <text-property name="text"> Tanda Tangan</text-property>
+                        </label>
+                        <grid id="254">
+                            <property name="height">2.625in</property>
+                            <property name="width">6.458333333333333in</property>
+                            <column id="255">
+                                <property name="width">4.21875in</property>
+                            </column>
+                            <column id="256">
+                                <property name="width">2.2395833333333335in</property>
+                            </column>
+                            <row id="257">
+                                <property name="height">2.4583333333333335in</property>
+                                <cell id="258">
+                                    <property name="colSpan">2</property>
+                                    <property name="rowSpan">1</property>
+                                </cell>
+                            </row>
+                            <row id="260">
+                                <cell id="261"/>
+                                <cell id="262">
+                                    <label id="263">
+                                        <text-property name="text">No. Formulir : .......................</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="264">
+                            <column id="265"/>
+                            <row id="266">
+                                <cell id="267"/>
+                            </row>
+                        </grid>
+                        <label id="268">
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">TANDA TERIMA</text-property>
+                        </label>
+                        <grid id="269">
+                            <column id="270"/>
+                            <row id="271">
+                                <cell id="272"/>
+                            </row>
+                            <row id="273">
+                                <cell id="274">
+                                    <label id="277">
+                                        <text-property name="text">Nama	: ...................................................................................</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                            <row id="275">
+                                <cell id="276">
+                                    <label id="278">
+                                        <text-property name="text">Alamat 	:...................................................................................</text-property>
+                                    </label>
+                                </cell>
+                            </row>
+                        </grid>
+                        <grid id="279">
+                            <property name="height">1.4270833333333333in</property>
+                            <property name="width">6.425in</property>
+                            <column id="280">
+                                <property name="width">2.6145833333333335in</property>
+                            </column>
+                            <column id="281">
+                                <property name="width">2.8541666666666665in</property>
+                            </column>
+                            <column id="282">
+                                <property name="width">0.95in</property>
+                            </column>
+                            <row id="283">
+                                <property name="height">0.2604166666666667in</property>
+                                <cell id="284"/>
+                                <cell id="285"/>
+                                <cell id="286"/>
+                            </row>
+                            <row id="287">
+                                <cell id="288"/>
+                                <cell id="289">
+                                    <label id="299">
+                                        <text-property name="text">............................... Tahun................</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="290"/>
+                            </row>
+                            <row id="291">
+                                <property name="height">0.625in</property>
+                                <cell id="292"/>
+                                <cell id="293">
+                                    <label id="300">
+                                        <text-property name="text">                     Yang Menerima</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="294"/>
+                            </row>
+                            <row id="295">
+                                <property name="height">0.2604166666666667in</property>
+                                <cell id="296"/>
+                                <cell id="297">
+                                    <label id="301">
+                                        <text-property name="text">                (                                   )</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="298"/>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

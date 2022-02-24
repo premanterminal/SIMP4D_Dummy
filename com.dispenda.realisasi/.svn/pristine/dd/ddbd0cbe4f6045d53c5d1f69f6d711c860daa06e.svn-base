@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="com.dispenda.realisasi">
+      </category>
+      <view
+            name="Penerimaan Pajak Daerah"
+            icon="icons/realisasi.gif"
+            category="com.dispenda.realisasi"
+            class="com.dispenda.realisasi.views.RealisasiPenerimaanPajakDaerahView"
+            id="com.dispenda.realisasi.views.RealisasiPenerimaanPajakDaerahView">
+      </view>
+      <view
+            category="com.dispenda.realisasi"
+            class="com.dispenda.realisasi.views.RealisasiPenerimaanSkpdkbView"
+            icon="icons/realisasi.gif"
+            id="com.dispenda.realisasi.views.RealisasiPenerimaanSkpdkbView"
+            name="Penerimaan SKPDKB">
+      </view>
+      <view
+            category="com.dispenda.realisasi"
+            class="com.dispenda.realisasi.views.RealisasiPenerimaanSptpdView"
+            icon="icons/realisasi.gif"
+            id="com.dispenda.realisasi.views.RealisasiPenerimaanSptpdView"
+            name="Penerimaan SPTPD">
+      </view>
+      <view
+            category="com.dispenda.realisasi"
+            class="com.dispenda.realisasi.views.RealisasiPenerimaanWajibPajakView"
+            icon="icons/realisasi.gif"
+            id="com.dispenda.realisasi.views.RealisasiPenerimaanWajibPajakView"
+            name="Penerimaan Wajib Pajak">
+      </view>
+      <view
+            category="com.dispenda.realisasi"
+            class="com.dispenda.realisasi.views.RealisasiPenerimaanView"
+            icon="icons/realisasi.gif"
+            id="com.dispenda.realisasi.views.RealisasiPenerimaanView"
+            name="Realisasi Penerimaan">
+      </view>
+      <view
+            category="com.dispenda.realisasi"
+            class="com.dispenda.realisasi.views.RealisasiHarianView"
+            icon="icons/realisasi.gif"
+            id="com.dispenda.realisasi.views.RealisasiHarianView"
+            name="Realisasi Harian">
+      </view>
+      <view
+            category="com.dispenda.realisasi"
+            class="com.dispenda.realisasi.views.RealisasiHarianKeuanganView"
+            icon="icons/realisasi.gif"
+            id="com.dispenda.realisasi.views.RealisasiHarianKeuanganView"
+            name="Realisasi Harian">
+      </view>
+   </extension>
+
+</plugin>

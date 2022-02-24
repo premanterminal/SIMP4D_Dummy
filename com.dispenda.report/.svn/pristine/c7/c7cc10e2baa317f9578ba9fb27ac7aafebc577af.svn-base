@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.1.v20110905 Build &lt;3.7.1.v20110905-1820></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <script-data-source name="Data Source" id="7"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="dsPendapatanBulanan" id="8">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">NamaPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">KodeBidang</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">NamaBidang</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">PajakSampaiBulanLalu</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">DendaSampaiBulanLalu</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">PajakBulanIni</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DendaBulanIni</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">SampaiBulanIni</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">NamaPajak</property>
+                    <text-property name="displayName">Nama Pajak</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">KodeBidang</property>
+                    <text-property name="displayName">Kode Bidang</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NamaBidang</property>
+                    <text-property name="displayName">Nama Bidang</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PajakSampaiBulanLalu</property>
+                    <text-property name="displayName">Pajak Sampai Bulan Lalu</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DendaSampaiBulanLalu</property>
+                    <text-property name="displayName">Denda Sampai Bulan Lalu</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PajakBulanIni</property>
+                    <text-property name="displayName">Pajak Bulan Ini</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DendaBulanIni</property>
+                    <text-property name="displayName">Denda Bulan Ini</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SampaiBulanIni</property>
+                    <text-property name="displayName">Sampai Bulan Ini</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">NamaPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">KodeBidang</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">NamaBidang</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">PajakSampaiBulanLalu</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">DendaSampaiBulanLalu</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">PajakBulanIni</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DendaBulanIni</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">SampaiBulanIni</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <method name="open"><![CDATA[importPackage(Packages.org.eclipse.core.runtime);
+count = 0;
+
+map = reportContext.getAppContext().get("PendapatanBulanan");]]></method>
+            <method name="fetch"><![CDATA[if(count<map.size()){
+	row["NamaPajak"] = map.get("NamaPajak");
+	row["KodeBidang"] = map.get("KodeBidang");
+	row["NamaBidang"] = map.get("NamaBidang");
+	row["PajakSampaiBulanLalu"] = map.get("PajakSampaiBulanLalu");
+	row["DendaSampaiBulanLalu"] = map.get("DendaSampaiBulanLalu");
+	row["DendaBulanIni"] = map.get("DendaBulanIni");
+	row["PajakBulanIni"] = map.get("PajakBulanIni");
+	row["SampaiBulanIni"] = map.get("SampaiBulanIni");
+	count++;
+	return true;
+}
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="height">2.5in</property>
+            <property name="width">11.5in</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">2cm</property>
+            <property name="leftMargin">0.28125in</property>
+            <property name="bottomMargin">2cm</property>
+            <property name="rightMargin">0.3125in</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="9">
+            <property name="fontFamily">"Arial"</property>
+            <property name="fontSize">14pt</property>
+            <property name="paddingBottom">10pt</property>
+            <text-property name="text">Laporan Pendapatan Bulanan</text-property>
+        </label>
+        <data id="10">
+            <property name="fontFamily">"Arial"</property>
+            <property name="paddingBottom">20pt</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">MasaPajak</property>
+                    <text-property name="displayName">MasaPajak</text-property>
+                    <expression name="expression" type="javascript">"Masa Pajak : " + vars["MasaPajak"]</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">MasaPajak</property>
+        </data>
+        <table id="115">
+            <property name="width">10.604166666666666in</property>
+            <property name="dataSet">dsPendapatanBulanan</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">NamaPajak</property>
+                    <text-property name="displayName">Nama Pajak</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NamaPajak"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KodeBidang</property>
+                    <text-property name="displayName">Kode Bidang</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KodeBidang"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NamaBidang</property>
+                    <text-property name="displayName">Nama Bidang</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NamaBidang"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PajakSampaiBulanLalu</property>
+                    <text-property name="displayName">Pajak Sampai Bulan Lalu</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PajakSampaiBulanLalu"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DendaSampaiBulanLalu</property>
+                    <text-property name="displayName">Denda Sampai Bulan Lalu</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DendaSampaiBulanLalu"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PajakBulanIni</property>
+                    <text-property name="displayName">Pajak Bulan Ini</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PajakBulanIni"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DendaBulanIni</property>
+                    <text-property name="displayName">Denda Bulan Ini</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DendaBulanIni"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">SampaiBulanIni</property>
+                    <text-property name="displayName">Sampai Bulan Ini</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["SampaiBulanIni"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="159">
+                <property name="width">1.09375in</property>
+            </column>
+            <column id="160">
+                <property name="width">1.0625in</property>
+            </column>
+            <column id="161">
+                <property name="width">1.28125in</property>
+            </column>
+            <column id="162">
+                <property name="width">1.6875in</property>
+            </column>
+            <column id="163">
+                <property name="width">1.6666666666666667in</property>
+            </column>
+            <column id="164">
+                <property name="width">1.1979166666666667in</property>
+            </column>
+            <column id="165">
+                <property name="width">1.25in</property>
+            </column>
+            <column id="166">
+                <property name="width">1.3645833333333333in</property>
+            </column>
+            <header>
+                <row id="116">
+                    <cell id="117">
+                        <label id="118">
+                            <text-property name="text">Nama Pajak</text-property>
+                        </label>
+                    </cell>
+                    <cell id="119">
+                        <label id="120">
+                            <text-property name="text">Kode Bidang</text-property>
+                        </label>
+                    </cell>
+                    <cell id="121">
+                        <label id="122">
+                            <text-property name="text">Nama Bidang</text-property>
+                        </label>
+                    </cell>
+                    <cell id="123">
+                        <label id="124">
+                            <text-property name="text">Pajak Sampai Bulan Lalu</text-property>
+                        </label>
+                    </cell>
+                    <cell id="125">
+                        <label id="126">
+                            <text-property name="text">Denda Sampai Bulan Lalu</text-property>
+                        </label>
+                    </cell>
+                    <cell id="127">
+                        <label id="128">
+                            <text-property name="text">Pajak Bulan Ini</text-property>
+                        </label>
+                    </cell>
+                    <cell id="129">
+                        <label id="130">
+                            <text-property name="text">Denda Bulan Ini</text-property>
+                        </label>
+                    </cell>
+                    <cell id="131">
+                        <label id="132">
+                            <text-property name="text">Sampai Bulan Ini</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="133">
+                    <cell id="134">
+                        <data id="135">
+                            <property name="resultSetColumn">NamaPajak</property>
+                        </data>
+                    </cell>
+                    <cell id="136">
+                        <data id="137">
+                            <property name="resultSetColumn">KodeBidang</property>
+                        </data>
+                    </cell>
+                    <cell id="138">
+                        <data id="139">
+                            <property name="resultSetColumn">NamaBidang</property>
+                        </data>
+                    </cell>
+                    <cell id="140">
+                        <data id="141">
+                            <property name="resultSetColumn">PajakSampaiBulanLalu</property>
+                        </data>
+                    </cell>
+                    <cell id="142">
+                        <data id="143">
+                            <property name="resultSetColumn">DendaSampaiBulanLalu</property>
+                        </data>
+                    </cell>
+                    <cell id="144">
+                        <data id="145">
+                            <property name="resultSetColumn">PajakBulanIni</property>
+                        </data>
+                    </cell>
+                    <cell id="146">
+                        <data id="147">
+                            <property name="resultSetColumn">DendaBulanIni</property>
+                        </data>
+                    </cell>
+                    <cell id="148">
+                        <data id="149">
+                            <property name="resultSetColumn">SampaiBulanIni</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="150">
+                    <cell id="151"/>
+                    <cell id="152"/>
+                    <cell id="153"/>
+                    <cell id="154"/>
+                    <cell id="155"/>
+                    <cell id="156"/>
+                    <cell id="157"/>
+                    <cell id="158"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="MasaPajak">
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

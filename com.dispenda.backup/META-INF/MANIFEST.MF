@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Backup
+Bundle-SymbolicName: com.dispenda.backup; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.dispenda.backup.Activator
+Bundle-Vendor: DISPENDA
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.dispenda.db;bundle-version="1.0.0",
+ common net;bundle-version="3.3.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Import-Package: com.dispenda.database

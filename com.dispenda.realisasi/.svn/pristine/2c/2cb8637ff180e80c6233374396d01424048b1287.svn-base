@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Realisasi
+Bundle-SymbolicName: com.dispenda.realisasi; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.dispenda.realisasi.Activator
+Bundle-Vendor: DISPENDA
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.dispenda.db;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: com.dispenda.realisasi.views
+Import-Package: com.dispenda.report,
+ com.ibm.icu.util;version="4.4.2.1"

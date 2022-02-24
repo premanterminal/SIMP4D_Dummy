@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Permohonan"
+            id="com.dispenda.angsuran">
+      </category>
+      <view
+            name="Permohonan"
+            icon="icons/angsuran.gif"
+            category="com.dispenda.angsuran"
+            class="com.dispenda.angsuran.views.PermohonanView"
+            id="com.dispenda.angsuran.views.PermohonanView">
+      </view>
+      <view
+            category="com.dispenda.angsuran"
+            class="com.dispenda.angsuran.views.DaftarPermohonanView"
+            icon="icons/angsuran.gif"
+            id="com.dispenda.angsuran.views.DaftarPermohonanView"
+            name="Daftar Permohonan">
+      </view>
+      <view
+            category="com.dispenda.angsuran"
+            class="com.dispenda.angsuran.views.DaftarAngsuranView"
+            icon="icons/angsuran.gif"
+            id="com.dispenda.angsuran.views.DaftarAngsuranView"
+            name="Daftar Angsuran">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="com.dispenda.angsuran.views.PermohonanView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>

@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.1.v20110905 Build &lt;3.7.1.v20110905-1820></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <script-data-source name="DS_LaporanRealisasiPenerimaanPajakDaerah" id="33"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="dsLaporanRealisasiPenerimaanPajakDaerah" id="34">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Bulan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">NamaBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">AlamatBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">NPWPD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">NoSSPD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">TglBayar</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">PokokPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">Denda</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">JumlahBayar</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">NoSSPD1</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">TglBayar1</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">MasaPajak1</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">PokokPajak1</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">Denda1</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">JumlahBayar1</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">NoSSPD2</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">TglBayar2</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">MasaPajak2</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">PokokPajak2</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">Denda2</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">JumlahBayar2</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">MasaPajakSekarang</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">Tahun</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Bulan</property>
+                    <text-property name="displayName">Bulan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NamaBadan</property>
+                    <text-property name="displayName">NamaBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AlamatBadan</property>
+                    <text-property name="displayName">AlamatBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NPWPD</property>
+                    <text-property name="displayName">NPWPD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NoSSPD</property>
+                    <text-property name="displayName">NoSSPD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TglBayar</property>
+                    <text-property name="displayName">TglBayar</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PokokPajak</property>
+                    <text-property name="displayName">PokokPajak</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Denda</property>
+                    <text-property name="displayName">Denda</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">JumlahBayar</property>
+                    <text-property name="displayName">JumlahBayar</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NoSSPD1</property>
+                    <text-property name="displayName">NoSSPD1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TglBayar1</property>
+                    <text-property name="displayName">TglBayar1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MasaPajak1</property>
+                    <text-property name="displayName">MasaPajak1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PokokPajak1</property>
+                    <text-property name="displayName">PokokPajak1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Denda1</property>
+                    <text-property name="displayName">Denda1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">JumlahBayar1</property>
+                    <text-property name="displayName">JumlahBayar1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NoSSPD2</property>
+                    <text-property name="displayName">NoSSPD2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TglBayar2</property>
+                    <text-property name="displayName">TglBayar2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MasaPajak2</property>
+                    <text-property name="displayName">MasaPajak2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PokokPajak2</property>
+                    <text-property name="displayName">PokokPajak2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Denda2</property>
+                    <text-property name="displayName">Denda2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">JumlahBayar2</property>
+                    <text-property name="displayName">JumlahBayar2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MasaPajakSekarang</property>
+                    <text-property name="displayName">MasaPajakSekarang</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Tahun</property>
+                    <text-property name="displayName">Tahun</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Bulan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">NamaBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">AlamatBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">NPWPD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">NoSSPD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">TglBayar</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">PokokPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">Denda</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">JumlahBayar</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">NoSSPD1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">TglBayar1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">MasaPajak1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">PokokPajak1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">Denda1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">JumlahBayar1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">NoSSPD2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">TglBayar2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">MasaPajak2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">PokokPajak2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">Denda2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">JumlahBayar2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">MasaPajakSekarang</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">Tahun</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">DS_LaporanRealisasiPenerimaanPajakDaerah</property>
+            <method name="open"><![CDATA[importPackage(Packages.org.eclipse.core.runtime);
+count = 0;
+
+map = reportContext.getAppContext().get("LaporanRealisasiPenerimaanWajibPajak");]]></method>
+            <method name="fetch"><![CDATA[if(count<map.size()){
+	row["Bulan"] = map.get("Bulan");
+	row["NamaBadan"] = map.get("NamaBadan");
+	row["AlamatBadan"] = map.get("AlamatBadan");
+	row["NPWPD"] = map.get("NPWPD");
+	row["NoSSPD"] = map.get("NoSSPD");
+	row["TanggalBayar"] = map.get("TanggalBayar");
+	row["Denda"] = map.get("Denda");
+	row["PokokPajak"] = map.get("PokokPajak");
+	row["JumlahBayar"] = map.get("JumlahBayar");
+	row["NoSSPD1"] = map.get("NoSSPD1");
+	row["TanggalBayar1"] = map.get("TanggalBayar1");
+	row["MasaPajak1"] = map.get("MasaPajak1");
+	row["PokokPajak1"] = map.get("PokokPajak1");
+	row["Denda1"] = map.get("Denda1");
+	row["JumlahBayar1"] = map.get("JumlahBayar1");
+	row["NoSSPD2"] = map.get("NoSSPD2");
+	row["TanggalBayar2"] = map.get("TanggalBayar2");
+	row["MasaPajak2"] = map.get("MasaPajak2");
+	row["PokokPajak2"] = map.get("PokokPajak2");
+	row["Denda2"] = map.get("Denda2");
+	row["JumlahBayar2"] = map.get("JumlahBayar2");
+	row["MasaPajakSekarang"] = map.get("MasaPajakSekarang");
+	row["Tahun"] = map.get("Tahun");
+	count++;
+	return true;
+}
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="height">3in</property>
+            <property name="width">22in</property>
+            <property name="bottomMargin">0.6458333333333334in</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="7">
+            <property name="width">11.5in</property>
+            <column id="8">
+                <property name="width">1.78125in</property>
+            </column>
+            <column id="9">
+                <property name="width">5.03125in</property>
+            </column>
+            <column id="10">
+                <property name="width">3.4270833333333335in</property>
+            </column>
+            <column id="11">
+                <property name="width">0.4895833333333333in</property>
+            </column>
+            <column id="12">
+                <property name="width">0.7708333333333334in</property>
+            </column>
+            <row id="13">
+                <cell id="14">
+                    <label id="31">
+                        <text-property name="text">Dinas Pendapatan Daerah Medan</text-property>
+                    </label>
+                </cell>
+                <cell id="15"/>
+                <cell id="16">
+                    <label id="32">
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Laporan Realisasi Penerimaan Wajib Pajak</text-property>
+                    </label>
+                </cell>
+                <cell id="17"/>
+                <cell id="18"/>
+            </row>
+            <row id="19">
+                <cell id="20"/>
+                <cell id="21"/>
+                <cell id="22">
+                    <data id="113">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Bulan</property>
+                                <text-property name="displayName">Bulan</text-property>
+                                <expression name="expression" type="javascript">"Bulan : ("+dataSetRow["Bulan"]+")"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Bulan</property>
+                    </data>
+                </cell>
+                <cell id="23"/>
+                <cell id="24"/>
+            </row>
+            <row id="25">
+                <cell id="26"/>
+                <cell id="27"/>
+                <cell id="28"/>
+                <cell id="29"/>
+                <cell id="30"/>
+            </row>
+        </grid>
+        <grid id="213">
+            <column id="214"/>
+            <column id="215"/>
+            <column id="216"/>
+            <column id="217"/>
+            <column id="218"/>
+            <column id="219"/>
+            <column id="220"/>
+            <column id="221"/>
+            <column id="222"/>
+            <column id="223"/>
+            <column id="224"/>
+            <column id="225"/>
+            <column id="226"/>
+            <column id="227"/>
+            <column id="228"/>
+            <column id="229"/>
+            <column id="230"/>
+            <column id="231"/>
+            <column id="232"/>
+            <column id="233"/>
+            <row id="234">
+                <cell id="235"/>
+                <cell id="236"/>
+                <cell id="237"/>
+                <cell id="238">
+                    <property name="colSpan">5</property>
+                    <property name="rowSpan">1</property>
+                    <data id="337">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">MasaPajakSekarang</property>
+                                <text-property name="displayName">MasaPajakSekarang</text-property>
+                                <expression name="expression" type="javascript">"Masa Pajak ("+dataSetRow["MasaPajakSekarang"]+")"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">MasaPajakSekarang</property>
+                    </data>
+                </cell>
+                <cell id="243">
+                    <property name="colSpan">6</property>
+                    <property name="rowSpan">1</property>
+                    <data id="338">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Tahun</property>
+                                <text-property name="displayName">Tahun</text-property>
+                                <expression name="expression" type="javascript">"Penerimaan Masa Pajak Bulan Lalu SKPD / LHP / SKPDKB Tahun ("+dataSetRow["Tahun"]+")"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Tahun</property>
+                    </data>
+                </cell>
+                <cell id="249">
+                    <property name="colSpan">6</property>
+                    <property name="rowSpan">1</property>
+                    <label id="339">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Penerimaan Tunggakan SKPD / LHP / SKPDKB Tahun Lalu</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="255">
+                <cell id="256">
+                    <label id="317">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Nama Badan</text-property>
+                    </label>
+                </cell>
+                <cell id="257">
+                    <label id="318">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Alamat</text-property>
+                    </label>
+                </cell>
+                <cell id="258">
+                    <label id="319">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">NPWPD</text-property>
+                    </label>
+                </cell>
+                <cell id="259">
+                    <label id="320">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">No SSPD</text-property>
+                    </label>
+                </cell>
+                <cell id="260">
+                    <label id="321">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Tgl Bayar</text-property>
+                    </label>
+                </cell>
+                <cell id="261">
+                    <label id="322">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Pokok Pajak</text-property>
+                    </label>
+                </cell>
+                <cell id="262">
+                    <label id="323">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Denda</text-property>
+                    </label>
+                </cell>
+                <cell id="263">
+                    <label id="324">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Jumlah Bayar</text-property>
+                    </label>
+                </cell>
+                <cell id="264">
+                    <label id="325">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">No SSPD</text-property>
+                    </label>
+                </cell>
+                <cell id="265">
+                    <label id="326">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Tgl Bayar</text-property>
+                    </label>
+                </cell>
+                <cell id="266">
+                    <label id="327">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Masa Pajak</text-property>
+                    </label>
+                </cell>
+                <cell id="267">
+                    <label id="328">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Pokok Pajak</text-property>
+                    </label>
+                </cell>
+                <cell id="268">
+                    <label id="329">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Denda</text-property>
+                    </label>
+                </cell>
+                <cell id="269">
+                    <label id="330">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Jumlah Bayar</text-property>
+                    </label>
+                </cell>
+                <cell id="270">
+                    <label id="331">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">No SSPD</text-property>
+                    </label>
+                </cell>
+                <cell id="271">
+                    <label id="332">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Tgl Bayar</text-property>
+                    </label>
+                </cell>
+                <cell id="272">
+                    <label id="333">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Masa Pajak</text-property>
+                    </label>
+                </cell>
+                <cell id="273">
+                    <label id="334">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Pokok Pajak</text-property>
+                    </label>
+                </cell>
+                <cell id="274">
+                    <label id="335">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Pokok Pajak</text-property>
+                    </label>
+                </cell>
+                <cell id="275">
+                    <label id="336">
+                        <property name="fontWeight">bold</property>
+                        <text-property name="text">Jumlah Bayar</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="276">
+                <cell id="277">
+                    <data id="297">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NamaBadan</property>
+                                <text-property name="displayName">NamaBadan</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NamaBadan"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NamaBadan</property>
+                    </data>
+                </cell>
+                <cell id="278">
+                    <data id="298">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">AlamatBadan</property>
+                                <text-property name="displayName">AlamatBadan</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["AlamatBadan"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">AlamatBadan</property>
+                    </data>
+                </cell>
+                <cell id="279">
+                    <data id="299">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NPWPD</property>
+                                <text-property name="displayName">NPWPD</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NPWPD"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NPWPD</property>
+                    </data>
+                </cell>
+                <cell id="280">
+                    <data id="300">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NoSSPD</property>
+                                <text-property name="displayName">NoSSPD</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NoSSPD"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NoSSPD</property>
+                    </data>
+                </cell>
+                <cell id="281">
+                    <data id="301">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">TglBayar</property>
+                                <text-property name="displayName">TglBayar</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TglBayar"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">TglBayar</property>
+                    </data>
+                </cell>
+                <cell id="282">
+                    <data id="302">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">PokokPajak</property>
+                                <text-property name="displayName">PokokPajak</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PokokPajak"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">PokokPajak</property>
+                    </data>
+                </cell>
+                <cell id="283">
+                    <data id="303">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Denda</property>
+                                <text-property name="displayName">Denda</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Denda"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Denda</property>
+                    </data>
+                </cell>
+                <cell id="284">
+                    <data id="304">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">JumlahBayar</property>
+                                <text-property name="displayName">JumlahBayar</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["JumlahBayar"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">JumlahBayar</property>
+                    </data>
+                </cell>
+                <cell id="285">
+                    <data id="305">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NoSSPD1</property>
+                                <text-property name="displayName">NoSSPD1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NoSSPD1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NoSSPD1</property>
+                    </data>
+                </cell>
+                <cell id="286">
+                    <data id="306">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">TglBayar1</property>
+                                <text-property name="displayName">TglBayar1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TglBayar1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">TglBayar1</property>
+                    </data>
+                </cell>
+                <cell id="287">
+                    <data id="307">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">MasaPajak1</property>
+                                <text-property name="displayName">MasaPajak1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["MasaPajak1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">MasaPajak1</property>
+                    </data>
+                </cell>
+                <cell id="288">
+                    <data id="308">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">PokokPajak1</property>
+                                <text-property name="displayName">PokokPajak1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PokokPajak1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">PokokPajak1</property>
+                    </data>
+                </cell>
+                <cell id="289">
+                    <data id="309">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Denda1</property>
+                                <text-property name="displayName">Denda1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Denda1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Denda1</property>
+                    </data>
+                </cell>
+                <cell id="290">
+                    <data id="310">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">JumlahBayar1</property>
+                                <text-property name="displayName">JumlahBayar1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["JumlahBayar1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">JumlahBayar1</property>
+                    </data>
+                </cell>
+                <cell id="291">
+                    <data id="311">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NoSSPD2</property>
+                                <text-property name="displayName">NoSSPD2</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["NoSSPD2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NoSSPD2</property>
+                    </data>
+                </cell>
+                <cell id="292">
+                    <data id="312">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">TglBayar2</property>
+                                <text-property name="displayName">TglBayar2</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["TglBayar2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">TglBayar2</property>
+                    </data>
+                </cell>
+                <cell id="293">
+                    <data id="313">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">MasaPajak2</property>
+                                <text-property name="displayName">MasaPajak2</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["MasaPajak2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">MasaPajak2</property>
+                    </data>
+                </cell>
+                <cell id="294">
+                    <data id="314">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">PokokPajak2</property>
+                                <text-property name="displayName">PokokPajak2</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["PokokPajak2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">PokokPajak2</property>
+                    </data>
+                </cell>
+                <cell id="295">
+                    <data id="315">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">Denda2</property>
+                                <text-property name="displayName">Denda2</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["Denda2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">Denda2</property>
+                    </data>
+                </cell>
+                <cell id="296">
+                    <data id="316">
+                        <property name="dataSet">dsLaporanRealisasiPenerimaanPajakDaerah</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">JumlahBayar2</property>
+                                <text-property name="displayName">JumlahBayar2</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["JumlahBayar2"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">JumlahBayar2</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>

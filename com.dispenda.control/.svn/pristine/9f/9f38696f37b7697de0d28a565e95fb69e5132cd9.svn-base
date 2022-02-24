@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Control Category"
+            id="com.dispenda.control">
+      </category>
+      <view
+            name="User View"
+            icon="icons/user.gif"
+            category="com.dispenda.control"
+            class="com.dispenda.control.views.UserView"
+            id="com.dispenda.control.views.UserView">
+      </view>
+      <view
+            category="com.dispenda.control"
+            class="com.dispenda.control.views.PajakView"
+            icon="icons/subpajak.gif"
+            id="com.dispenda.control.views.PajakView"
+            name="Pajak View">
+      </view>
+      <view
+            category="com.dispenda.control"
+            class="com.dispenda.control.views.PejabatView"
+            icon="icons/pejabat.gif"
+            id="com.dispenda.control.views.PejabatView"
+            name="Pejabat View">
+      </view>
+      <view
+            category="com.dispenda.control"
+            class="com.dispenda.control.views.KecamatanView"
+            icon="icons/kecamatan.gif"
+            id="com.dispenda.control.views.KecamatanView"
+            name="Kecamatan View">
+      </view>
+      <view
+            category="com.dispenda.control"
+            class="com.dispenda.control.views.KodefikasiView"
+            icon="icons/sample.gif"
+            id="com.dispenda.control.views.KodefikasiView"
+            name="Kodefikasi View">
+      </view>
+      <view
+            category="com.dispenda.control"
+            class="com.dispenda.control.views.AwardView"
+            icon="icons/award.gif"
+            id="com.dispenda.control.views.AwardView"
+            name="Award">
+      </view>
+      <view
+            category="com.dispenda.control"
+            class="com.dispenda.control.views.PreferencesView"
+            icon="icons/award.gif"
+            id="com.dispenda.control.views.PreferencesView"
+            name="Preferences">
+      </view>
+   </extension>
+
+</plugin>

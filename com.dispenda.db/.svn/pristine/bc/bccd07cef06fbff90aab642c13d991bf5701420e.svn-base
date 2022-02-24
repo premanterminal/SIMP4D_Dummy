@@ -1,0 +1,217 @@
+package com.dispenda.web.bkad;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.dispenda.database.DBConnection;
+import com.dispenda.database.DBOperation;
+import com.dispenda.db.Activator;
+
+public enum ApiPost {
+	Instance;
+	private DBOperation db = new DBOperation();
+	
+	public boolean sendPost(String[] objSptpd, String oldSts){
+		boolean retValue = false;
+		String url = "";
+		if (oldSts == "") //url Insert
+			url = Activator.getDefault().readFile("apiurlget");
+//			url = "http://172.16.73.4:8291/home";
+		else //url Update
+			url = Activator.getDefault().readFile("apiurlupdate");
+//			url = "http://172.16.73.4:8291/update";
+//		String url = "http://202.159.112.161:1103/epaymentapi/api/web/index.php/apis/create-sts?access-token=8335b70212059154beab6b9662155d1c";
+
+		HttpClient client = new DefaultHttpClient();
+		HttpPost post = new HttpPost(url);
+
+		// add header
+//		post.setHeader("User-Agent", USER_AGENT);
+
+		List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
+		urlParameters.add(new BasicNameValuePair("No_Pokok_WP", objSptpd[0]));
+		urlParameters.add(new BasicNameValuePair("Nama_Pemilik", objSptpd[1]));
+		urlParameters.add(new BasicNameValuePair("Alamat_Pemilik", objSptpd[2]));
+		urlParameters.add(new BasicNameValuePair("Nilai", objSptpd[3]));
+		urlParameters.add(new BasicNameValuePair("Denda", objSptpd[4]));
+		urlParameters.add(new BasicNameValuePair("No_STPD", objSptpd[5]));
+		urlParameters.add(new BasicNameValuePair("Tgl_STPD", objSptpd[6]));
+		urlParameters.add(new BasicNameValuePair("Mata_Anggaran", objSptpd[7]));
+		urlParameters.add(new BasicNameValuePair("masa_bayar", objSptpd[8]));
+		urlParameters.add(new BasicNameValuePair("jatuh_tempo", objSptpd[9]));
+		if (oldSts!="")
+			urlParameters.add(new BasicNameValuePair("No_STS", oldSts));
+
+		try {
+			post.setEntity(new UrlEncodedFormEntity(urlParameters));
+		
+
+		HttpResponse response = client.execute(post);
+		
+		System.out.println("\nSending 'POST' request to URL : " + url);
+		System.out.println("Post parameters : " + post.getEntity());
+		System.out.println("Response Code : " +
+                                    response.getStatusLine().getStatusCode());
+
+		BufferedReader rd = new BufferedReader(
+                        new InputStreamReader(response.getEntity().getContent()));
+
+		StringBuffer result = new StringBuffer();
+		String line = "";
+		while ((line = rd.readLine()) != null) {
+			result.append(line);
+		}
+//		System.out.println(result.toString());
+		
+		if(response.getStatusLine().getStatusCode() == 201){
+			try {
+				JSONObject returnJson = DecodeJSON.Instance.decodeJSONSingleRow(result.toString());
+				String noSts = returnJson.get("No_STS").toString();
+				System.out.println("No STS :"+noSts);
+				String query = "";
+				if (objSptpd[5].contains("SKPDKB"))
+					query = "Update Periksa set STS = '" + noSts + "', STSVALID = '" + objSptpd[9] + "' where No_SKP = '" + objSptpd[5] + "' AND NPWPD = '" + objSptpd[0] + "'";
+				else
+					query = "Update SPTPD set STS = '" + noSts + "', STSVALID = '" + objSptpd[9] + "' where No_SPTPD = '" + objSptpd[5] + "' AND NPWPD = '" + objSptpd[0] + "'";
+				boolean resultQuery = db.ExecuteStatementQuery(query, DBConnection.INSTANCE.open());
+				if(!resultQuery)
+					retValue = false;
+//				else
+//					MessageDialog.openError(Display.getCurrent().getActiveShell(), "STS", "Insert STS sukses.");
+				retValue = true;
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else if (response.getStatusLine().getStatusCode() == 200){
+			String query = "";
+			if (objSptpd[5].contains("SKPDKB"))
+				query = "Update Periksa set STSVALID = '" + objSptpd[9] + "' where No_SKP = '" + objSptpd[5] + "' AND NPWPD = '" + objSptpd[0] + "'";
+			else
+				query = "Update SPTPD set STSVALID = '" + objSptpd[9] + "' where No_SPTPD = '" + objSptpd[5] + "' AND NPWPD = '" + objSptpd[0] + "'";
+			boolean resultQuery = db.ExecuteStatementQuery(query, DBConnection.INSTANCE.open());
+			if(!resultQuery)
+				retValue = false;
+			retValue = true;
+		}else
+		System.out.println(result.toString());
+		
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return retValue;
+	}
+	
+	public boolean sendPostAngsuran(String[] objSptpd, String oldSts, Integer idMohon, Integer cicilan){
+		boolean retValue = false;
+		String url = "";
+		if (oldSts == "") //url Insert
+			url = "http://serpispaimen.pemkomedan.go.id/index.php/apis/create-sts-replika?access-token=8335b70212059154beab6b9662155d1c";
+//			url = "http://172.16.73.4:8291/home";
+		else //url Update
+			url = "http://serpispaimen.pemkomedan.go.id/index.php/apis/update-sts-rep?access-token=8335b70212059154beab6b9662155d1c";
+//			url = "http://172.16.73.4:8291/update";
+//		String url = "http://202.159.112.161:1103/epaymentapi/api/web/index.php/apis/create-sts?access-token=8335b70212059154beab6b9662155d1c";
+
+		HttpClient client = new DefaultHttpClient();
+		HttpPost post = new HttpPost(url);
+
+		// add header
+//		post.setHeader("User-Agent", USER_AGENT);
+
+		List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
+		urlParameters.add(new BasicNameValuePair("No_Pokok_WP", objSptpd[0]));
+		urlParameters.add(new BasicNameValuePair("Nama_Pemilik", objSptpd[1]));
+		urlParameters.add(new BasicNameValuePair("Alamat_Pemilik", objSptpd[2]));
+		urlParameters.add(new BasicNameValuePair("Nilai", objSptpd[3]));
+		urlParameters.add(new BasicNameValuePair("Denda", objSptpd[4]));
+		urlParameters.add(new BasicNameValuePair("No_STPD", objSptpd[5]));
+		urlParameters.add(new BasicNameValuePair("Tgl_STPD", objSptpd[6]));
+		urlParameters.add(new BasicNameValuePair("Mata_Anggaran", objSptpd[7]));
+		urlParameters.add(new BasicNameValuePair("masa_bayar", objSptpd[8]));
+		urlParameters.add(new BasicNameValuePair("jatuh_tempo", objSptpd[9]));
+		if (oldSts!="")
+			urlParameters.add(new BasicNameValuePair("No_STS", oldSts));
+
+		try {
+			post.setEntity(new UrlEncodedFormEntity(urlParameters));
+		
+
+		HttpResponse response = client.execute(post);
+		
+		System.out.println("\nSending 'POST' request to URL : " + url);
+		System.out.println("Post parameters : " + post.getEntity());
+		System.out.println("Response Code : " +
+                                    response.getStatusLine().getStatusCode());
+
+		BufferedReader rd = new BufferedReader(
+                        new InputStreamReader(response.getEntity().getContent()));
+
+		StringBuffer result = new StringBuffer();
+		String line = "";
+		while ((line = rd.readLine()) != null) {
+			result.append(line);
+		}
+//		System.out.println(result.toString());
+		
+		if(response.getStatusLine().getStatusCode() == 201){
+			try {
+				JSONObject returnJson = DecodeJSON.Instance.decodeJSONSingleRow(result.toString());
+				String noSts = returnJson.get("No_STS").toString();
+				System.out.println("No STS :"+noSts);
+				String query = "Update Mohon_Detail set STS = '" + noSts + "', STSVALID = '" + objSptpd[9] + "' where IDMOHON = " + idMohon + " AND No_Angsuran = " + cicilan;
+				
+				boolean resultQuery = db.ExecuteStatementQuery(query, DBConnection.INSTANCE.open());
+				if(!resultQuery)
+					retValue = false;
+//				else
+//					MessageDialog.openError(Display.getCurrent().getActiveShell(), "STS", "Insert STS sukses.");
+				retValue = true;
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else if (response.getStatusLine().getStatusCode() == 200){
+			String query = "Update MOHON_DETAIL set STSVALID = '" + objSptpd[9] + "' where IDMOHON = " + idMohon + " AND No_Angsuran = " + cicilan;
+			boolean resultQuery = db.ExecuteStatementQuery(query, DBConnection.INSTANCE.open());
+			if(!resultQuery)
+				retValue = false;
+			retValue = true;
+		}else
+		System.out.println(result.toString());
+		
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return retValue;
+	}
+}

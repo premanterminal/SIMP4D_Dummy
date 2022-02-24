@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.22" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.1.v20110905 Build &lt;3.7.1.v20110905-1820></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <script-data-source name="Data Source" id="23"/>
+    </data-sources>
+    <data-sets>
+        <script-data-set name="Data Set" id="24">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">0</property>
+                    <property name="name">NamaPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">MasaPajak</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">NamaPajak</property>
+                    <text-property name="displayName">NamaPajak</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MasaPajak</property>
+                    <text-property name="displayName">MasaPajak</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">NamaPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">MasaPajak</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <method name="open"><![CDATA[importPackage(Packages.org.eclipse.core.runtime);
+count = 0;
+
+map = reportContext.getAppContext().get("LaporanMutasi");]]></method>
+            <method name="fetch"><![CDATA[if(count<map.size()){
+	row["MasaPajak"] = map.get("MasaPajak");
+	row["NamaPajak"] = map.get("NamaPajak");
+	count++;
+	return true;
+}
+return false;]]></method>
+        </script-data-set>
+        <script-data-set name="Data Set1" id="27">
+            <list-property name="resultSetHints">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">NamaBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">AlamatBadan</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">NPWPD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">NamaBidangUsaha</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">NamaBadan</property>
+                    <text-property name="displayName">NamaBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AlamatBadan</property>
+                    <text-property name="displayName">AlamatBadan</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NPWPD</property>
+                    <text-property name="displayName">NPWPD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NamaBidangUsaha</property>
+                    <text-property name="displayName">NamaBidangUsaha</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">NamaBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">AlamatBadan</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">NPWPD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">NamaBidangUsaha</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <method name="open"><![CDATA[importPackage(Packages.org.eclipse.core.runtime);
+count = 0;
+
+map = reportContext.getAppContext().get("LaporanMutasi1");]]></method>
+            <method name="fetch"><![CDATA[if(count<map.size()){
+	row["NamaBadan"] = map.get("NamaBadan");
+	row["AlamatBadan"] = map.get("AlamatBadan");
+	row["NPWPD"] = map.get("NPWPD");
+	row["NamaBidangUsaha"] = map.get("NamaBidangUsaha");
+	count++;
+	return true;
+}
+return false;]]></method>
+        </script-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="height">1.5in</property>
+            <property name="width">13in</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0.08333333333333333in</property>
+            <property name="bottomMargin">0.08333333333333333in</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="7">
+            <property name="width">12.447916666666666in</property>
+            <column id="8">
+                <property name="width">1.9479166666666667in</property>
+            </column>
+            <column id="9">
+                <property name="width">3.3229166666666665in</property>
+            </column>
+            <column id="10">
+                <property name="width">3in</property>
+            </column>
+            <column id="11">
+                <property name="width">4.177083333333333in</property>
+            </column>
+            <row id="12">
+                <cell id="13">
+                    <label id="22">
+                        <text-property name="text">Dinas Pendapatan Daerah Kota Medan</text-property>
+                    </label>
+                </cell>
+                <cell id="14"/>
+                <cell id="15">
+                    <data id="25">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">NamaPajak</property>
+                                <text-property name="displayName">NamaPajak</text-property>
+                                <expression name="expression" type="javascript">"Daftar Piutang ("+ dataSetRow["NamaPajak"] +")"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">NamaPajak</property>
+                    </data>
+                </cell>
+                <cell id="16"/>
+            </row>
+            <row id="17">
+                <cell id="18"/>
+                <cell id="19"/>
+                <cell id="20">
+                    <data id="26">
+                        <property name="dataSet">Data Set</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">MasaPajak</property>
+                                <text-property name="displayName">MasaPajak</text-property>
+                                <expression name="expression" type="javascript">"Per ("+ dataSetRow["MasaPajak"] +")"</expression>
+                                <property name="dataType">string</property>
+                                <property name="allowExport">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">MasaPajak</property>
+                    </data>
+                </cell>
+                <cell id="21"/>
+            </row>
+        </grid>
+        <table id="28">
+            <property name="width">3.0833333333333335in</property>
+            <property name="dataSet">Data Set1</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">NamaBadan</property>
+                    <text-property name="displayName">NamaBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NamaBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AlamatBadan</property>
+                    <text-property name="displayName">AlamatBadan</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["AlamatBadan"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NPWPD</property>
+                    <text-property name="displayName">NPWPD</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NPWPD"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">NamaBidangUsaha</property>
+                    <text-property name="displayName">NamaBidangUsaha</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["NamaBidangUsaha"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="47">
+                <property name="width">1.0520833333333333in</property>
+            </column>
+            <column id="48">
+                <property name="width">1.0520833333333333in</property>
+            </column>
+            <column id="49">
+                <property name="width">0.9791666666666666in</property>
+            </column>
+            <header>
+                <row id="29">
+                    <cell id="30">
+                        <label id="31">
+                            <text-property name="text">NamaBadan</text-property>
+                        </label>
+                    </cell>
+                    <cell id="32">
+                        <data id="50">
+                            <property name="resultSetColumn">NamaBidangUsaha</property>
+                        </data>
+                    </cell>
+                    <cell id="34">
+                        <label id="35">
+                            <text-property name="text">NPWPD</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="36">
+                    <cell id="37">
+                        <data id="38">
+                            <property name="resultSetColumn">NamaBadan</property>
+                        </data>
+                    </cell>
+                    <cell id="39">
+                        <data id="40">
+                            <property name="resultSetColumn">AlamatBadan</property>
+                        </data>
+                    </cell>
+                    <cell id="41">
+                        <data id="42">
+                            <property name="resultSetColumn">NPWPD</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

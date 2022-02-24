@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tunggakan
+Bundle-SymbolicName: com.dispenda.tunggakan; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.dispenda.tunggakan.TunggakanActivator
+Bundle-Vendor: DISPENDA
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.dispenda.db;bundle-version="1.0.0",
+ com.dispenda.report;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: com.dispenda.tunggakan.views

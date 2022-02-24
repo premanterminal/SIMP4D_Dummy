@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="SSPD"
+            id="com.dispenda.sspd">
+      </category>
+      <view
+            name="Nota Antri SSPD"
+            icon="icons/pembayaran.gif"
+            category="com.dispenda.sspd"
+            class="com.dispenda.sspd.views.SSPDView"
+            id="com.dispenda.sspd.views.SSPDView">
+      </view>
+      <view
+            category="com.dispenda.sspd"
+            class="com.dispenda.sspd.views.DaftarSSPDView"
+            icon="icons/pembayaran.gif"
+            id="com.dispenda.sspd.views.DaftarSSPDView"
+            name="Daftar SSPD">
+      </view>
+      <view
+            category="com.dispenda.sspd"
+            class="com.dispenda.sspd.views.AntriView"
+            icon="icons/pembayaran.gif"
+            id="com.dispenda.sspd.views.AntriView"
+            name="Antrian SSPD">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="com.dispenda.sspd.views.SSPDView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.dispenda.sspd.perspectives.PembayaranPerspective"
+            id="com.dispenda.sspd.perspectives.PembayaranPerspective"
+            name="Pembayaran Perspective">
+      </perspective>
+   </extension>
+
+</plugin>
