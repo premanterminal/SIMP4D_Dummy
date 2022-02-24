@@ -1,0 +1,7 @@
+http://serpispaimen.pemkomedan.go.id/index.php/apis/create-sts-replika?access-token=8335b70212059154beab6b9662155d1c
+
+http://serpispaimen.pemkomedan.go.id/index.php/apis/update-sts-rep?access-token=8335b70212059154beab6b9662155d1c
+
+
+http://172.16.73.4:8291/create
+http://172.16.73.4:8291/update
