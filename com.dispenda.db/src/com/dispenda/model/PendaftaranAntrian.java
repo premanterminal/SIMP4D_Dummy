@@ -32,7 +32,7 @@ public class PendaftaranAntrian {
 	private String no_bukti_diri = "" ;
 	private String no_KK = "" ;
 	private Boolean isidentil;
-	private Boolean insidentil_pemerintahan;
+//	private Boolean insidentil_pemerintahan;
 	private Array suratIzin;
 	private Array noSurat;
 	private Array tglSurat;
@@ -54,7 +54,9 @@ public class PendaftaranAntrian {
 			String jenis_pajak, Date tanggal_daftar, Integer bidang_usaha, String keterangan, Integer kewajiban_pajak, String alating_jalan, String alating_kelurahan,
 			String alating_kecamatan, String alating_telepon, String alating_kodepos, String alabad_jalan, 
 			String alabad_kelurahan, String alabad_kecamatan, String alabad_telepon, String alabad_kodepos,
-			String kewarganegaraan, String tanda_bukti_diri, String no_bukti_diri, String no_KK, Boolean isidentil, Boolean insidentil_pemerintahan,Array suratIzin, Array noSurat, Array tglSurat, String ketReject,
+			String kewarganegaraan, String tanda_bukti_diri, String no_bukti_diri, String no_KK, 
+			Boolean isidentil, 
+//			Boolean insidentil_pemerintahan,Array suratIzin, Array noSurat, Array tglSurat, String ketReject,
 			String file_identitas, Array file_izin, String nama_bid_usaha)
 	{
 		this.index = index ;
@@ -83,7 +85,7 @@ public class PendaftaranAntrian {
 		this.no_bukti_diri = no_bukti_diri ;
 		this.no_KK = no_KK ;
 		this.isidentil = isidentil;
-		this.insidentil_pemerintahan = insidentil_pemerintahan;
+//		this.insidentil_pemerintahan = insidentil_pemerintahan;
 		this.suratIzin = suratIzin;
 		this.noSurat = noSurat;
 		this.ketReject = ketReject;
@@ -207,9 +209,9 @@ public class PendaftaranAntrian {
 	public void setInsidentil(Boolean isidentil) {
 		propertyChangeSupport.firePropertyChange("isidentil", this.isidentil, this.isidentil = isidentil);
 	}
-	public void setInsidentil_Pemerintah(Boolean insidentil_pemerintahan) {
-		propertyChangeSupport.firePropertyChange("insidentil_pemerintahan", this.insidentil_pemerintahan, this.insidentil_pemerintahan = insidentil_pemerintahan);
-	}
+//	public void setInsidentil_Pemerintah(Boolean insidentil_pemerintahan) {
+//		propertyChangeSupport.firePropertyChange("insidentil_pemerintahan", this.insidentil_pemerintahan, this.insidentil_pemerintahan = insidentil_pemerintahan);
+//	}
 	
 	public void setSuratIzin(Array suratIzin) {
 		propertyChangeSupport.firePropertyChange("suratIzin", this.suratIzin, this.suratIzin = suratIzin);
@@ -367,9 +369,9 @@ public class PendaftaranAntrian {
 		return isidentil;
 	}
 	
-	public Boolean getInsidentil_Pemerintah() {
-		return insidentil_pemerintahan;
-	}
+//	public Boolean getInsidentil_Pemerintah() {
+//		return insidentil_pemerintahan;
+//	}
 	
 	public Array getSuratIzin() {
 		return suratIzin;

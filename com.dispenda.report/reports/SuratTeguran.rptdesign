@@ -560,8 +560,9 @@ return false;]]></method>
                                         <property name="fontWeight">bold</property>
                                         <property name="textAlign">center</property>
                                         <property name="contentType">auto</property>
-                                        <text-property name="content"><![CDATA[BADAN PENGELOLA PAJAK 
-DAN RETRIBUSI DAERAH KOTA MEDAN]]></text-property>
+                                        <text-property name="content"><![CDATA[An. KEPALA BADAN PENGELOLA PAJAK 
+DAN RETRIBUSI DAERAH 
+KOTA MEDAN]]></text-property>
                                     </text>
                                 </cell>
                             </row>
@@ -602,7 +603,7 @@ DAN RETRIBUSI DAERAH KOTA MEDAN]]></text-property>
                                     <data id="221">
                                         <property name="fontSize">12pt</property>
                                         <property name="fontWeight">bold</property>
-                                        <property name="textUnderline">underline</property>
+                                        <property name="textUnderline">none</property>
                                         <property name="paddingLeft">100pt</property>
                                         <property name="textAlign">left</property>
                                         <list-property name="boundDataColumns">

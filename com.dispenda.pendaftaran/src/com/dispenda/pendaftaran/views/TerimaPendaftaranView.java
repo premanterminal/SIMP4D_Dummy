@@ -874,7 +874,7 @@ public class TerimaPendaftaranView extends ViewPart {
 //		antri.setJenisAssesment(cmbJenisAssesment.getItem(cmbJenisAssesment.getSelectionIndex()));
 //		antri.setKewajibanPajak((Integer)cmbKewajibanPajak.getData(Integer.toString(cmbKewajibanPajak.getSelectionIndex())));
 //		antri.setIdSubPajak((Integer)cmbBidangUsaha.getData(Integer.toString(cmbBidangUsaha.getSelectionIndex())));
-		chkInsidentil.setSelection(antri.getIsidentil());
+//		chkInsidentil.setSelection(antri.getIsidentil());
 //		antri.setKetReject("");
 		
 		if(antri.getTandaBuktiDiri().equalsIgnoreCase(btnWni.getText()))

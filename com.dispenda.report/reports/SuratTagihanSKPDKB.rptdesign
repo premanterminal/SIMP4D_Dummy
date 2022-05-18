@@ -450,8 +450,8 @@ return false;]]></method>
                                                         <property name="fontFamily">"Calibri"</property>
                                                         <property name="fontSize">12pt</property>
                                                         <property name="fontWeight">bold</property>
-                                                        <property name="textUnderline">underline</property>
-                                                        <text-property name="text">Tagihan SKPDKB</text-property>
+                                                        <property name="textUnderline">none</property>
+                                                        <text-property name="text">Surat Tagihan SKPDKB</text-property>
                                                     </label>
                                                 </cell>
                                             </row>
@@ -610,7 +610,7 @@ return false;]]></method>
                                 <property name="marginRight">0.5in</property>
                                 <property name="textAlign">justify</property>
                                 <property name="contentType">html</property>
-                                <text-property name="content"><![CDATA[	<P>Dalam rangka mengoptimalkan Pendapatan Asli Daerah khususnya dari sektor Pajak Hotel, Restoran dan Hiburan, serta upaya meningkatkan kepatuhan Wajib Pajak dalam membayarkan Surat Ketetapan Pajak Daerah Kurang Bayar (SKPDKB), maka dengan ini diminta kepada Saudara agar segera melunasi tunggakan pajak terhutang dengan perincian sebagai berikut:<BR>
+                                <text-property name="content"><![CDATA[	<P>Sehubungan dengan telah diberikannya Surat Ketetapan Pajak Daerah Kurang Bayar (SKPDKB) dan menurut catatan yang ada pada kami Saudara belum melunasi SKPDKB sebagaimana tertera pada tabel dibawah ini:<BR>
 ]]></text-property>
                             </text>
                             <table id="319">
@@ -1213,10 +1213,8 @@ return false;]]></method>
                                 <property name="marginRight">0.5in</property>
                                 <property name="textAlign">justify</property>
                                 <property name="contentType">html</property>
-                                <text-property name="content"><![CDATA[	<P>Denda terlambat SSPD tersebut berlaku sampai dengan tanggal jatuh tempo, setelah itu setiap bulannya denda bertambah 2% (dua persen) dari pokok pajak.<BR>
-	<BR>Selanjutnya dihimbau agar melakukan pembayaran pajak tersebut dengan tepat waktu.<BR>
-	<BR>Apabila Saudara masih memerlukan penjelasan lebih lanjut, maka diharapkan Saudara datang ke Kantor Badan Pengelola Pajak dan Retribusi Daerah Kota Medan, Bidang Hotel, Restoran dan Hiburan pada jam kerja.<BR>
-	<BR>Demikian disampaikan untuk dapat dilaksanakan sesuai dengan peraturan perpajakan daerah yang berlaku, terima kasih.<BR>]]></text-property>
+                                <text-property name="content"><![CDATA[	<P>Selanjutnya diminta kepada Saudara untuk melakukan pembayaran tunggakan pajak terutang sebagaimana tersebut diatas. Apabila pajak yang terutang yang pada saat jatuh tempo pembayaran tidak dibayar atau kurang dibayar dikenakan denda administrasi sebesar 2% (dua persen) setiap bulan.<BR>
+	<BR>Demikian disampaikan untuk menjadi perhatian, agar kewajiban perpajakan Saudara dapat dipenuhi sebagaimana mestinya.<BR>]]></text-property>
                             </text>
                             <grid id="146">
                                 <property name="height">0.3958333333333333in</property>
@@ -1266,7 +1264,7 @@ return false;]]></method>
                                             <property name="contentType">auto</property>
                                             <text-property name="content"><![CDATA[BADAN PENGELOLA
 PAJAK DAN RETRIBUSI DAERAH KOTA MEDAN
-Kepala]]></text-property>
+Kepala,]]></text-property>
                                         </text>
                                     </cell>
                                 </row>
@@ -1292,6 +1290,7 @@ Kepala]]></text-property>
                                             <property name="fontFamily">"Calibri"</property>
                                             <property name="fontSize">12pt</property>
                                             <property name="fontWeight">bold</property>
+                                            <property name="textUnderline">underline</property>
                                             <property name="textAlign">center</property>
                                             <text-property name="text">Benny Sinomba Siregar, SE</text-property>
                                         </label>
@@ -1304,8 +1303,8 @@ Kepala]]></text-property>
                                             <property name="fontFamily">"Calibri"</property>
                                             <property name="fontSize">12pt</property>
                                             <property name="fontWeight">bold</property>
-                                            <property name="textAlign">center</property>
-                                            <text-property name="text">Pembina</text-property>
+                                            <property name="textAlign">left</property>
+                                            <text-property name="text">                          Pembina</text-property>
                                         </label>
                                     </cell>
                                 </row>
@@ -1316,8 +1315,8 @@ Kepala]]></text-property>
                                             <property name="fontFamily">"Calibri"</property>
                                             <property name="fontSize">12pt</property>
                                             <property name="fontWeight">bold</property>
-                                            <property name="textAlign">center</property>
-                                            <text-property name="text">19730601 200212 1 001</text-property>
+                                            <property name="textAlign">left</property>
+                                            <text-property name="text">                          19730601 200212 1 001</text-property>
                                         </label>
                                     </cell>
                                 </row>

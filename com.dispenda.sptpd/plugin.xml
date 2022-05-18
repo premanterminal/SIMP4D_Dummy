@@ -35,13 +35,82 @@
             id="com.dispenda.sptpd.views.DaftarSKPDKeuanganView"
             name="Daftar SKPD Keuangan">
       </view>
-      <view
-            category="com.dispenda.sptpd"
-            class="com.dispenda.sptpd.views.VerifikasiSPTPDView"
-            icon="icons/sptpd.gif"
-            id="com.dispenda.sptpd.views.VerifikasiSPTPDView"
-            name="Verifikasi SPTPD">
-      </view>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    </extension>
    <extension
          point="org.eclipse.ui.perspectiveExtensions">

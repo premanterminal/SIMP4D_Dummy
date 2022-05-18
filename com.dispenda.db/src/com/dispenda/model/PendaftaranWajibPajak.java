@@ -40,7 +40,7 @@ public class PendaftaranWajibPajak{
 	private String bidang_usaha = "";
 	private String kode_bid_usaha = "";
 	private Boolean insidentil;
-	private Boolean insidentil_pemerintahan;
+//	private Boolean insidentil_pemerintahan;
 	private String keterangan_tutup;
 	private Boolean aktif;
 	private Boolean tutup;
@@ -85,7 +85,7 @@ public class PendaftaranWajibPajak{
 			String bidang_usaha,
 			String Kode_bid_usaha,
 			Boolean insidentil,
-			Boolean insidentil_pemerintahan,
+//			Boolean insidentil_pemerintahan,
 			String keterangan_tutup,
 			Boolean aktif,
 			Boolean tutup,
@@ -287,9 +287,9 @@ public class PendaftaranWajibPajak{
 		propertyChangeSupport.firePropertyChange("insidentil", this.insidentil, this.insidentil = insidentil);
 	}
 	
-	public void setInsidentil_Pemerintah(Boolean insidentil_pemerintahan) {
-		propertyChangeSupport.firePropertyChange("insidentil_pemerintahan", this.insidentil_pemerintahan, this.insidentil_pemerintahan = insidentil_pemerintahan);
-	}
+//	public void setInsidentil_Pemerintah(Boolean insidentil_pemerintahan) {
+//		propertyChangeSupport.firePropertyChange("insidentil_pemerintahan", this.insidentil_pemerintahan, this.insidentil_pemerintahan = insidentil_pemerintahan);
+//	}
 	
 	public void setTutup(Boolean tutup) {
 		propertyChangeSupport.firePropertyChange("tutup", this.tutup, this.tutup = tutup);
@@ -442,9 +442,9 @@ public class PendaftaranWajibPajak{
 		return insidentil;
 	}
 	
-	public Boolean getInsidentil_Pemerintah() {
-		return insidentil_pemerintahan;
-	}
+//	public Boolean getInsidentil_Pemerintah() {
+//		return insidentil_pemerintahan;
+//	}
 	
 	public Boolean getTutup() {
 		return tutup;
