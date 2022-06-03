@@ -285,11 +285,19 @@ public class AntriView extends ViewPart implements ICommunicationView {
 //					
 //				} catch (Exception e1) {}
 
+<<<<<<< HEAD
 //				printSSPD_link(); //versi print online sspd
 				if (isDenda == 0)//jangan dihapus, ini versi tidak nge link
 					printSSPD();
 				else
 					printSSPDDenda();
+=======
+				printSSPD_link(); //versi print online sspd
+//				if (isDenda == 0)//jangan dihapus, ini versi tidak nge link
+//					printSSPD();
+//				else
+//					printSSPDDenda();
+>>>>>>> c0c67f74cee17970d3bc5217f2930ee05bcc224a
 			}
 		});
 		tblTerima.setMenu(menu);

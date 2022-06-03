@@ -610,7 +610,11 @@ return false;]]></method>
                                 <property name="marginRight">0.5in</property>
                                 <property name="textAlign">justify</property>
                                 <property name="contentType">html</property>
+<<<<<<< HEAD
                                 <text-property name="content"><![CDATA[	<P>&amp;emsp;&amp;emsp;&amp;emsp;Sehubungan dengan telah diberikannya Surat Ketetapan Pajak Daerah Kurang Bayar (SKPDKB) dan menurut catatan yang ada pada kami Saudara belum melunasi SKPDKB sebagaimana tertera pada tabel dibawah ini:<BR>
+=======
+                                <text-property name="content"><![CDATA[	<P>Sehubungan dengan telah diberikannya Surat Ketetapan Pajak Daerah Kurang Bayar (SKPDKB) dan menurut catatan yang ada pada kami Saudara belum melunasi SKPDKB sebagaimana tertera pada tabel dibawah ini:<BR>
+>>>>>>> c0c67f74cee17970d3bc5217f2930ee05bcc224a
 ]]></text-property>
                             </text>
                             <table id="319">
@@ -1270,9 +1274,14 @@ return false;]]></method>
                                 <property name="marginRight">0.5in</property>
                                 <property name="textAlign">justify</property>
                                 <property name="contentType">html</property>
+<<<<<<< HEAD
                                 <text-property name="content"><![CDATA[	<P>&amp;emsp;&amp;emsp;&amp;emsp;Selanjutnya diminta kepada Saudara untuk melakukan pembayaran tunggakan pajak terutang sebagaimana tersebut di atas. Apabila pajak yang terutang yang pada saat jatuh tempo pembayaran tidak dibayar atau kurang dibayar dikenakan denda administrasi sebesar 2% (dua persen) setiap bulan.<BR>
 	<BR>
 	<p>&amp;emsp;&amp;emsp;&amp;emsp;Demikian disampaikan untuk menjadi perhatian, agar kewajiban perpajakan Saudara dapat dipenuhi sebagaimana mestinya.<BR>]]></text-property>
+=======
+                                <text-property name="content"><![CDATA[	<P>Selanjutnya diminta kepada Saudara untuk melakukan pembayaran tunggakan pajak terutang sebagaimana tersebut diatas. Apabila pajak yang terutang yang pada saat jatuh tempo pembayaran tidak dibayar atau kurang dibayar dikenakan denda administrasi sebesar 2% (dua persen) setiap bulan.<BR>
+	<BR>Demikian disampaikan untuk menjadi perhatian, agar kewajiban perpajakan Saudara dapat dipenuhi sebagaimana mestinya.<BR>]]></text-property>
+>>>>>>> c0c67f74cee17970d3bc5217f2930ee05bcc224a
                             </text>
                             <grid id="146">
                                 <property name="height">0.3958333333333333in</property>
@@ -1362,7 +1371,11 @@ Kepala,]]></text-property>
                                             <property name="fontSize">12pt</property>
                                             <property name="fontWeight">bold</property>
                                             <property name="textAlign">left</property>
+<<<<<<< HEAD
                                             <text-property name="text">                               Pembina</text-property>
+=======
+                                            <text-property name="text">                          Pembina</text-property>
+>>>>>>> c0c67f74cee17970d3bc5217f2930ee05bcc224a
                                         </label>
                                     </cell>
                                 </row>
@@ -1374,7 +1387,11 @@ Kepala,]]></text-property>
                                             <property name="fontSize">12pt</property>
                                             <property name="fontWeight">bold</property>
                                             <property name="textAlign">left</property>
+<<<<<<< HEAD
                                             <text-property name="text">                               19730601 200212 1 001</text-property>
+=======
+                                            <text-property name="text">                          19730601 200212 1 001</text-property>
+>>>>>>> c0c67f74cee17970d3bc5217f2930ee05bcc224a
                                         </label>
                                     </cell>
                                 </row>
