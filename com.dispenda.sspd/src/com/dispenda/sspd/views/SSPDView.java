@@ -2921,6 +2921,7 @@ public class SSPDView extends ViewPart implements ICommunicationView {
 			txtNoUrut.setText(sspd.getNpwpd().substring(1, 8));
 			lblLunas.setVisible(false);
 			getDataWP();
+			System.out.println(wp.getStatus());
 			if (wp.getStatus() != null && !wp.getStatus().equalsIgnoreCase("Aktif")){
 				// TODO Set warna background dan getNoSuratKeteranganTutup dari table tutup
 				lblKeterangan.setVisible(true);

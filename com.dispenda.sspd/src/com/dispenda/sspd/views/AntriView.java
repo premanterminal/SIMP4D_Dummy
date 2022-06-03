@@ -1,7 +1,12 @@
 package com.dispenda.sspd.views;
 
 //import java.sql.Timestamp;
+import java.awt.Desktop;
 import java.awt.Dialog;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,6 +16,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
+import javax.xml.bind.DatatypeConverter;
 
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.SWT;
@@ -57,6 +64,8 @@ import com.dispenda.sspd.dialog.RegPbbDialog;
 import com.dispenda.widget.MoneyField;
 import com.ibm.icu.util.Currency;
 import com.ibm.icu.util.CurrencyAmount;
+import org.apache.commons.codec.binary.Base64;
+
 
 
 public class AntriView extends ViewPart implements ICommunicationView {
@@ -264,28 +273,44 @@ public class AntriView extends ViewPart implements ICommunicationView {
 			public void widgetSelected(SelectionEvent e) {
 				menuItemGanti.setEnabled(false);
 				int isDenda = ControllerFactory.getMainController().getCpSspdDAOImpl().isDenda(listBayar.get(tblTerima.getSelectionIndex()).getNoSspd());
-				if (isDenda == 0)
+				//tambahurldisini
+//				String nosspd = listBayar.get(tblTerima.getSelectionIndex()).getNoSspd();
+//				String npwpd = listBayar.get(tblTerima.getSelectionIndex()).getNpwpd();
+//				String uniq = npwpd+'-'+nosspd+'-';
+//				String encode = DatatypeConverter.printBase64Binary(uniq.getBytes());
+//				String link = "https://simp4d.jarpajar.xyz/sspd/view.html?id="+encode+"=&is_pdf=1";
+//				try {
+////				    Desktop.getDesktop().browse(new URL("https://simp4d.jarpajar.xyz/sspd/view.html?id=MzAwMDIwMjIxMzAzLTIyNjE3L1NTUEQvMjAxNC0=&is_pdf=1").toURI());
+//				    Desktop.getDesktop().browse(new URL(link).toURI());
+//					
+//				} catch (Exception e1) {}
+
+//				printSSPD_link(); //versi print online sspd
+				if (isDenda == 0)//jangan dihapus, ini versi tidak nge link
 					printSSPD();
 				else
 					printSSPDDenda();
 			}
 		});
 		tblTerima.setMenu(menu);
-		MenuItem menuBatal = new MenuItem(menu, SWT.PUSH);
-		menuBatal.setText("Batal");
-		menuBatal.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				if (isSave()){
-					noSSPDGanti = listBayar.get(tblTerima.getSelectionIndex()).getNoSspd();
-					idSSPDGanti = listBayar.get(tblTerima.getSelectionIndex()).getIdSspd();
-					menuItemGanti.setEnabled(true);
-					MessageDialog.openInformation(Display.getCurrent().getActiveShell(), "BPPRD Kota Medan", "Pilih SSPD pengganti dari daftar antrian");
-				}else{
-					MessageDialog.openWarning(Display.getCurrent().getActiveShell(), "BPPRD Kota Medan", "Anda tidak memiliki hak untuk menyimpan atau merubah data.");
+		if (userModul.getIdUser() == 1 || userModul.getIdUser() == 19 || userModul.getIdUser() == 20){
+			MenuItem menuBatal = new MenuItem(menu, SWT.PUSH);
+			menuBatal.setText("Batal");
+			menuBatal.addSelectionListener(new SelectionAdapter() {
+				@Override
+				public void widgetSelected(SelectionEvent e) {
+					if (isSave()){
+						noSSPDGanti = listBayar.get(tblTerima.getSelectionIndex()).getNoSspd();
+						idSSPDGanti = listBayar.get(tblTerima.getSelectionIndex()).getIdSspd();
+						menuItemGanti.setEnabled(true);
+						MessageDialog.openInformation(Display.getCurrent().getActiveShell(), "BPPRD Kota Medan", "Pilih SSPD pengganti dari daftar antrian");
+					}else{
+						MessageDialog.openWarning(Display.getCurrent().getActiveShell(), "BPPRD Kota Medan", "Anda tidak memiliki hak untuk menyimpan atau merubah data.");
+					}
 				}
-			}
-		});
+			});
+		}
+		
 		tblTerima.setMenu(menu);
 		if (userModul.getIdUser() == 1){
 			MenuItem menuDouble = new MenuItem(menu, SWT.PUSH);
@@ -462,7 +487,21 @@ public class AntriView extends ViewPart implements ICommunicationView {
 		btnCetak.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				printSSPD();
+				//tambahurldisini
+//				printSSPD(); //jangan dihapus, ini versi tidak nge link
+				printSSPD_link(); //versi print online sspd
+				
+//				String nosspd = listBayar.get(tblTerima.getSelectionIndex()).getNoSspd();
+//				String npwpd = listBayar.get(tblTerima.getSelectionIndex()).getNpwpd();
+//				String uniq = npwpd+'-'+nosspd+'-';
+//				String encode = DatatypeConverter.printBase64Binary(uniq.getBytes());
+//				String link = "https://simp4d.jarpajar.xyz/sspd/view.html?id="+encode+"=&is_pdf=1";
+//				try {
+////				    Desktop.getDesktop().browse(new URL("https://simp4d.jarpajar.xyz/sspd/view.html?id=MzAwMDIwMjIxMzAzLTIyNjE3L1NTUEQvMjAxNC0=&is_pdf=1").toURI());
+//				    Desktop.getDesktop().browse(new URL(link).toURI());
+//					
+//				} catch (Exception e1) {}
+				
 			}
 		});
 		GridData gd_btnCetak = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
@@ -882,6 +921,22 @@ public class AntriView extends ViewPart implements ICommunicationView {
 		}else
 			MessageDialog.openWarning(Display.getCurrent().getActiveShell(), "BPPRD Kota Medan", "Anda tidak memiliki hak untuk mencetak.");
 	}
+	
+	private void printSSPD_link(){
+		String nosspd = listBayar.get(tblTerima.getSelectionIndex()).getNoSspd();
+		String npwpd = listBayar.get(tblTerima.getSelectionIndex()).getNpwpd();
+		String uniq = npwpd+'-'+nosspd+'-';
+		String encode = DatatypeConverter.printBase64Binary(uniq.getBytes());
+//		String link_x = "https://simp4d.jarpajar.xyz/sspd/view.html?id="+encode+"=&is_pdf=1";
+		String link = "https://simp4d.pemkomedan.go.id/sspd/view.html?id="+encode+"=&is_pdf=1";
+		try {
+//		    Desktop.getDesktop().browse(new URL("https://simp4d.jarpajar.xyz/sspd/view.html?id=MzAwMDIwMjIxMzAzLTIyNjE3L1NTUEQvMjAxNC0=&is_pdf=1").toURI());
+		    Desktop.getDesktop().browse(new URL(link).toURI());
+			
+		} catch (Exception e1) {}
+		
+	}
+	
 	
 	@SuppressWarnings("deprecation")
 	private void TerimaSSPD(){

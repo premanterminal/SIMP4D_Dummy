@@ -54,7 +54,7 @@ public class CPWajibPajakDAOImpl{
 				"'"+ wajibPajakModel.getTanggalApprove()+"'," +
 				"'"+ wajibPajakModel.getBidangUsaha()+"'," +
 				""+ wajibPajakModel.getInsidentil()+"," +
-				""+ wajibPajakModel.getInsidentil_Pemerintah()+"," +
+//				""+ wajibPajakModel.getInsidentil_Pemerintah()+"," +
 				"'"+ wajibPajakModel.getKeteranganTutup()+"'," +
 				"'"+ ControllerFactory.getMainController().getCpWajibPajakDAOImpl().getDateNow().toString().split(" ")[0]+"'," +
 				""+ wajibPajakModel.getAktif()+"," +
@@ -93,7 +93,7 @@ public class CPWajibPajakDAOImpl{
 				"tgl_approve," +
 				"bid_usaha," +
 				"insidentil," +
-				"insidentil_pemerintahan," +
+//				"insidentil_pemerintahan," +
 				"ket_tutup," +
 				"tgl_input," +
 				"aktif," +
@@ -133,7 +133,7 @@ public class CPWajibPajakDAOImpl{
 				"WAJIB_PAJAK.TANGGAL_APPROVE = vals.tgl_approve," +
 				"WAJIB_PAJAK.KODE_BID_USAHA = vals.bid_usaha," +
 				"WAJIB_PAJAK.INSIDENTIL = vals.insidentil," +
-				"WAJIB_PAJAK.INSIDENTIL_PEMERINTAHAN = vals.insidentil_pemerintahan," +
+//				"WAJIB_PAJAK.INSIDENTIL_PEMERINTAHAN = vals.insidentil_pemerintahan," +
 				"WAJIB_PAJAK.KETERANGAN_TUTUP = vals.ket_tutup," +
 				"WAJIB_PAJAK.TANGGAL_INPUT = vals.tgl_input," +
 				"WAJIB_PAJAK.AKTIF = vals.aktif," +
@@ -171,7 +171,7 @@ public class CPWajibPajakDAOImpl{
 				"vals.tgl_approve," +
 				"vals.bid_usaha," +
 				"vals.insidentil," +
-				"vals.insidentil_pemerintahan," +
+//				"vals.insidentil_pemerintahan," +
 				"vals.ket_tutup," +
 				"vals.tgl_input," +
 				"vals.aktif," +
@@ -224,7 +224,7 @@ public class CPWajibPajakDAOImpl{
 					wajibPajakModel.setTutup(result.getBoolean("TUTUP"));
 					wajibPajakModel.setEkswp(result.getBoolean("EKSWP"));
 					wajibPajakModel.setInsidentil(result.getBoolean("INSIDENTIL"));
-					wajibPajakModel.setInsidentil_Pemerintah(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
+//					wajibPajakModel.setInsidentil_Pemerintah(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
 					wajibPajakModel.setKeteranganTutup(result.getString("KETERANGAN_TUTUP"));
 					wajibPajakModel.setIdSubPajak(result.getInt("IDSUB_PAJAK"));
 					wajibPajakModel.setNamaBidangUsaha(result.getString("NAMA_BID_USAHA"));
@@ -325,7 +325,7 @@ public class CPWajibPajakDAOImpl{
 					wajibPajakModel.setTutup(result.getBoolean("TUTUP"));
 					wajibPajakModel.setEkswp(result.getBoolean("EKSWP"));
 					wajibPajakModel.setInsidentil(result.getBoolean("INSIDENTIL"));
-					wajibPajakModel.setInsidentil_Pemerintah(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
+//					wajibPajakModel.setInsidentil_Pemerintah(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
 //					System.out.println("insi get"+result.getBoolean("INSIDENTIL"));
 //					System.out.println("insi p get"+result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
 					wajibPajakModel.setKeteranganTutup(result.getString("KETERANGAN_TUTUP"));
@@ -371,6 +371,7 @@ public class CPWajibPajakDAOImpl{
 	@SuppressWarnings("deprecation")
 	public PendaftaranWajibPajak getNPWPD(Integer NoUrut)
 	{
+//		String Query = "Select * from GetNPWPD2 where CAST(SUBSTRING(NPWPD, 2, 7) AS INTEGER) = '"+ NoUrut +"'";
 		String Query = "Select * from GetNPWPD where CAST(SUBSTRING(NPWPD, 2, 7) AS INTEGER) = '"+ NoUrut +"'";
 		ResultSet result = db.ResultExecutedStatementQuery(Query, DBConnection.INSTANCE.open());
 		if (result != null)
@@ -394,7 +395,7 @@ public class CPWajibPajakDAOImpl{
 					wp.setKodeBidangUsaha(result.getString("Kode_Bid_Usaha"));
 					wp.setTarif(result.getInt("Tarif"));
 					wp.setInsidentil(result.getBoolean("Insidentil"));
-					wp.setInsidentil_Pemerintah(result.getBoolean("Insidentil_pemerintahan"));
+//					wp.setInsidentil_Pemerintah(result.getBoolean("Insidentil_pemerintahan"));
 					if (result.getString("Alating_Jalan")==null)
 						wp.setAlatingJalan("");
 					else

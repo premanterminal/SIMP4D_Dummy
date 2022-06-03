@@ -86,7 +86,7 @@ public class PendaftaranView extends ViewPart implements ICommunicationView {
 	private Combo cmbKewajibanPajak;
 	private Combo cmbBidangUsaha;
 	private Button chkInsidentil;
-	private Button chkInsidentil_pemerintahan;
+//	private Button chkInsidentil_pemerintahan;
 	private Button btnWni;
 	private Button btnWna;
 	private DateTime calTanggalDaftar;
@@ -425,11 +425,13 @@ public class PendaftaranView extends ViewPart implements ICommunicationView {
 		lblInsidentilPemerintahan.setFont(SWTResourceManager.getFont(Preferences.FONT_STYLE, Preferences.FONT_SIZE, SWT.NORMAL));
 		new Label(grpPendaftaran, SWT.NONE);
 		
-		chkInsidentil_pemerintahan = new Button(grpPendaftaran, SWT.CHECK);
+//		chkInsidentil_pemerintahan = new Button(grpPendaftaran, SWT.CHECK);
 		new Label(grpPendaftaran, SWT.NONE);
 		new Label(grpPendaftaran, SWT.NONE);
 		new Label(grpPendaftaran, SWT.NONE);
-		grpPendaftaran.setTabList(new Control[]{cmbJenisPajak, cmbJenisAssesment, calTanggalDaftar, txtNamaBadan, txtPemilik, txtJabatan, cmbKewajibanPajak, cmbBidangUsaha, txtKeterangan, chkInsidentil, chkInsidentil_pemerintahan});
+		grpPendaftaran.setTabList(new Control[]{cmbJenisPajak, cmbJenisAssesment, calTanggalDaftar, txtNamaBadan, txtPemilik, txtJabatan, cmbKewajibanPajak, cmbBidangUsaha, txtKeterangan, chkInsidentil, 
+//				chkInsidentil_pemerintahan
+				});
 		
 		grpAlamatBadanusaha = new Group(composite, SWT.NONE);
 		grpAlamatBadanusaha.setLayoutData(new GridData(SWT.CENTER, SWT.CENTER, true, false, 1, 1));
@@ -881,7 +883,7 @@ public class PendaftaranView extends ViewPart implements ICommunicationView {
 	        				wajibPajakModel.setEkswp(false);
 	        				wajibPajakModel.setIdSubPajak((Integer)cmbBidangUsaha.getData(Integer.toString(cmbBidangUsaha.getSelectionIndex())));
 	        				wajibPajakModel.setInsidentil(chkInsidentil.getSelection());
-	        				wajibPajakModel.setInsidentil_Pemerintah(chkInsidentil_pemerintahan.getSelection());
+//	        				wajibPajakModel.setInsidentil_Pemerintah(chkInsidentil_pemerintahan.getSelection());
 	        				wajibPajakModel.setJabatan(txtJabatan.getText());
 	        				wajibPajakModel.setJenisAssesment(cmbJenisAssesment.getText());
 	        				wajibPajakModel.setJenisPajak((String)cmbJenisPajak.getData(cmbJenisPajak.getText()));
@@ -1002,7 +1004,7 @@ public class PendaftaranView extends ViewPart implements ICommunicationView {
 							antri.setKewajibanPajak((Integer)cmbKewajibanPajak.getData(Integer.toString(cmbKewajibanPajak.getSelectionIndex())));
 							antri.setIdSubPajak((Integer)cmbBidangUsaha.getData(Integer.toString(cmbBidangUsaha.getSelectionIndex())));
 							antri.setInsidentil(chkInsidentil.getSelection());
-							antri.setInsidentil_Pemerintah(chkInsidentil_pemerintahan.getSelection());
+//							antri.setInsidentil_Pemerintah(chkInsidentil_pemerintahan.getSelection());
 							antri.setKetReject("");
 							
 							if(btnWni.getSelection())
@@ -1217,7 +1219,7 @@ public class PendaftaranView extends ViewPart implements ICommunicationView {
 			chkInsidentil.setSelection(wp.getInsidentil());
 //			System.out.println(wp.getInsidentil_Pemerintah());
 //			System.out.println(wp.getInsidentil());
-			chkInsidentil_pemerintahan.setSelection(wp.getInsidentil_Pemerintah());
+//			chkInsidentil_pemerintahan.setSelection(wp.getInsidentil_Pemerintah());
 			
 			txtJalanBadan.setText(wp.getAlabadJalan());
 			cmbKecamatanBadan.select(cmbKecamatanBadan.indexOf(wp.getAlabadKecamatan()));

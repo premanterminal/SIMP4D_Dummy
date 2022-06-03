@@ -119,6 +119,7 @@ public class DaftarSKPDView extends ViewPart {
 		lblKewajibanPajak.setFont(SWTResourceManager.getFont(Preferences.FONT_STYLE, Preferences.FONT_SIZE, SWT.NORMAL));
 		lblKewajibanPajak.setText("Kewajiban Pajak");
 		
+		//Catatan SF: ini style nya si dropdown jenis pajak
 		cmbPajak = new Combo(comp, SWT.READ_ONLY);
 		cmbPajak.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_BACKGROUND));
 		cmbPajak.setForeground(SWTResourceManager.getColor(SWT.COLOR_BLACK));
@@ -386,8 +387,10 @@ public class DaftarSKPDView extends ViewPart {
 		btnLihat.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				//Catatan SF: cek dropdown pajak apakah kosong atau tidak
 				if (cmbPajak.getSelectionIndex() >= 0)
 				{
+					//Catatan SF: jika sudah dipilih jenis pajaknya, maka jalankan perintah dibawah
 					try {
 						ResultSet result = null;
 						tbl_SKPD.removeAll();
@@ -400,9 +403,11 @@ public class DaftarSKPDView extends ViewPart {
 							kel = Integer.valueOf((String)cmbKelurahan.getData(cmbKelurahan.getItem(cmbKelurahan.getSelectionIndex())));
 						
 						if (chkSSPD.getSelection()){
+							//Catatan SF: Jika centang "tampilkan sspd" maka jalankan perintah dibawah ini
 							result = ControllerFactory.getMainController().getCpSptpdDAOImpl().getDaftarSKPDSSPD(cmbPajak.getData(Integer.toString(cmbPajak.getSelectionIndex())).toString(), masaPajakDari, masaPajakSampai, kec, kel);
 							createColumnSSPD();
 						}else{
+							//Catatan SF:  Jika tidak centang "tampilkan sspd" maka jalankan perintah dibawah ini
 							result = ControllerFactory.getMainController().getCpSptpdDAOImpl().getDaftarSKPD(cmbPajak.getData(Integer.toString(cmbPajak.getSelectionIndex())).toString(), masaPajakDari, masaPajakSampai, kec, kel);
 							createColumn();
 						}

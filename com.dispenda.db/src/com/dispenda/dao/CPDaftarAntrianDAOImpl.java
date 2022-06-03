@@ -210,7 +210,7 @@ public class CPDaftarAntrianDAOImpl {
 					daftarAntriModel.setNoBuktiDiri(result.getString("NO_BUKTI_DIRI"));
 					daftarAntriModel.setNoKartuKeluraga(result.getString("NO_KARTU_KELUARGA"));
 					daftarAntriModel.setInsidentil(result.getBoolean("INSIDENTIL"));
-					daftarAntriModel.setInsidentil(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
+//					daftarAntriModel.setInsidentil(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
 					daftarAntriModel.setSuratIzin(result.getArray("SURAT_IZIN"));
 					daftarAntriModel.setNoSurat(result.getArray("NO_SURAT"));
 					daftarAntriModel.setTglSurat(result.getArray("TANGGAL_SURAT"));
@@ -267,7 +267,7 @@ public class CPDaftarAntrianDAOImpl {
 					daftarAntriModel.setNoBuktiDiri(result.getString("NO_BUKTI_DIRI"));
 					daftarAntriModel.setNoKartuKeluraga(result.getString("NO_KARTU_KELUARGA"));
 					daftarAntriModel.setInsidentil(result.getBoolean("INSIDENTIL"));
-					daftarAntriModel.setInsidentil_Pemerintah(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
+//					daftarAntriModel.setInsidentil_Pemerintah(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
 					daftarAntriModel.setSuratIzin(result.getArray("SURAT_IZIN"));
 					daftarAntriModel.setNoSurat(result.getArray("NO_SURAT"));
 					daftarAntriModel.setTglSurat(result.getArray("TANGGAL_SURAT"));
@@ -327,7 +327,7 @@ public class CPDaftarAntrianDAOImpl {
 					daftarAntriModel.setNoBuktiDiri(result.getString("NO_BUKTI_DIRI"));
 					daftarAntriModel.setNoKartuKeluraga(result.getString("NO_KARTU_KELUARGA"));
 					daftarAntriModel.setInsidentil(result.getBoolean("INSIDENTIL"));
-					daftarAntriModel.setInsidentil_Pemerintah(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
+//					daftarAntriModel.setInsidentil_Pemerintah(result.getBoolean("INSIDENTIL_PEMERINTAHAN"));
 					daftarAntriModel.setSuratIzin(result.getArray("SURAT_IZIN"));
 					daftarAntriModel.setNoSurat(result.getArray("NO_SURAT"));
 					daftarAntriModel.setTglSurat(result.getArray("TANGGAL_SURAT"));

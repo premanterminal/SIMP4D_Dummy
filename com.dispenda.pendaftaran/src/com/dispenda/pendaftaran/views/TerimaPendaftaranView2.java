@@ -139,7 +139,7 @@ public class TerimaPendaftaranView2 extends ViewPart {
 		        				wajibPajakModel.setEkswp(false);
 		        				wajibPajakModel.setIdSubPajak(antrian.getIdSubPajak());
 		        				wajibPajakModel.setInsidentil(antrian.getIsidentil());
-		        				wajibPajakModel.setInsidentil_Pemerintah(antrian.getInsidentil_Pemerintah());
+		        				//wajibPajakModel.setInsidentil_Pemerintah(antrian.getInsidentil_Pemerintah());
 		        				wajibPajakModel.setJabatan(antrian.getJabatan());
 		        				wajibPajakModel.setJenisAssesment(antrian.getJenisAssesment());
 		        				wajibPajakModel.setJenisPajak(antrian.getJenisPajak());

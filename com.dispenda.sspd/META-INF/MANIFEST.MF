@@ -18,3 +18,4 @@ Export-Package: com.dispenda.sspd.dialog,
  com.dispenda.sspd.views
 Bundle-ClassPath: .,
  swing2swt.jar
+Import-Package: org.apache.commons.codec.binary

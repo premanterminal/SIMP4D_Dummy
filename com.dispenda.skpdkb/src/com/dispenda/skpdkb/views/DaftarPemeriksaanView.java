@@ -362,6 +362,8 @@ public class DaftarPemeriksaanView extends ViewPart {
 		cmbKasiPenetapan.setLayoutData(gd_cmbKasiPenetapan);
 		new Label(comp, SWT.NONE);
 		
+		//SF Note : dibawah ini adalah fungsi dari button lihat untuk mengisi tblSKP
+		
 		Button btnLihat = new Button(comp, SWT.NONE);
 		btnLihat.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -462,6 +464,8 @@ public class DaftarPemeriksaanView extends ViewPart {
 		compButton.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 4, 1));
 		compButton.setLayout(new GridLayout(6, false));
 		
+		
+		//SF Note : Dibawah ini fungsi untuk cetak blanko
 		Button btnCetakBlanko = new Button(compButton, SWT.NONE);
 		btnCetakBlanko.addSelectionListener(new SelectionAdapter() {
 			@Override
@@ -502,6 +506,9 @@ public class DaftarPemeriksaanView extends ViewPart {
 					ReportAppContext.map.put("Line1", line1);
 					ReportAppContext.map.put("Line2", line2);
 					ReportAppContext.map.put("Line3", line3);
+					
+					// SF Note : dibawah ini script untuk generate data sesuai tblSKP
+					
 					if (btnSkpdkb.getSelection()){
 						ReportAppContext.nameObject = "BlankoSKPDKB";
 						ReportAppContext.classLoader = DaftarPemeriksaanView.class.getClassLoader();

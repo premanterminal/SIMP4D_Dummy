@@ -1,4 +1,4 @@
-package com.dispenda.sptpd.views;
+ package com.dispenda.sptpd.views;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -144,14 +144,14 @@ public class DaftarSPTPDView extends ViewPart {
 		new Label(comp, SWT.NONE);
 		
 		Label lblTanggalSptpd = new Label(comp, SWT.NONE);
-		lblTanggalSptpd.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 2));
+		lblTanggalSptpd.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 5));
 		lblTanggalSptpd.setForeground(fontColor);
 		lblTanggalSptpd.setFont(SWTResourceManager.getFont(Preferences.FONT_STYLE, Preferences.FONT_SIZE, SWT.NORMAL));
 		lblTanggalSptpd.setText("Tanggal SPTPD");
 		
 		composite = new Group(comp, SWT.NONE);
 		composite.setLayout(new GridLayout(5, false));
-		composite.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 5, 2));
+		composite.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 5, 5));
 		
 		btnTanggal = new Button(composite, SWT.RADIO);
 		btnTanggal.addSelectionListener(new SelectionAdapter() {
@@ -287,6 +287,108 @@ public class DaftarSPTPDView extends ViewPart {
 		cmbSort.setBackground(SWTResourceManager.getColor(SWT.COLOR_WIDGET_BACKGROUND));
 		cmbSort.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
 		cmbSort.select(0);
+		
+		grpRealisasiSptpd = new Group(comp, SWT.NONE);
+		grpRealisasiSptpd.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		GridData gd_grpRealisasiSptpd = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 8);
+		gd_grpRealisasiSptpd.widthHint = 702;
+		gd_grpRealisasiSptpd.heightHint = 179;
+		grpRealisasiSptpd.setLayoutData(gd_grpRealisasiSptpd);
+		grpRealisasiSptpd.setText("Realisasi SPTPD");
+		
+		Label lblSptpdBerjalan = new Label(grpRealisasiSptpd, SWT.NONE);
+		lblSptpdBerjalan.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblSptpdBerjalan.setBounds(10, 47, 82, 15);
+		lblSptpdBerjalan.setText("SPTPD Berjalan");
+		
+		Label lblSPTPDTunggakan = new Label(grpRealisasiSptpd, SWT.NONE);
+		lblSPTPDTunggakan.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblSPTPDTunggakan.setText("SPTPD Tunggakan");
+		lblSPTPDTunggakan.setBounds(10, 74, 110, 15);
+		
+		lblTotal = new Label(grpRealisasiSptpd, SWT.NONE);
+		lblTotal.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblTotal.setBounds(10, 95, 55, 15);
+		lblTotal.setText("Total");
+		
+		textPokokSPTPDberjalan = new Text(grpRealisasiSptpd, SWT.BORDER);
+		textPokokSPTPDberjalan.setEditable(false);
+		textPokokSPTPDberjalan.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		textPokokSPTPDberjalan.setBounds(124, 44, 157, 21);
+		
+		textPokokSPTPDTunggakan = new Text(grpRealisasiSptpd, SWT.BORDER);
+		textPokokSPTPDTunggakan.setEditable(false);
+		textPokokSPTPDTunggakan.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		textPokokSPTPDTunggakan.setBounds(124, 68, 157, 21);
+		
+		textPokokTotal = new Text(grpRealisasiSptpd, SWT.BORDER);
+		textPokokTotal.setEditable(false);
+		textPokokTotal.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		textPokokTotal.setBounds(124, 92, 157, 21);
+		
+		Label lblPokok = new Label(grpRealisasiSptpd, SWT.NONE);
+		lblPokok.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblPokok.setText("Pokok");
+		lblPokok.setBounds(124, 23, 82, 15);
+		
+		text_DendaSPTPDBerjalan = new Text(grpRealisasiSptpd, SWT.BORDER);
+		text_DendaSPTPDBerjalan.setEditable(false);
+		text_DendaSPTPDBerjalan.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		text_DendaSPTPDBerjalan.setBounds(287, 44, 175, 21);
+		
+		text_DendaSPTPDTunggakan = new Text(grpRealisasiSptpd, SWT.BORDER);
+		text_DendaSPTPDTunggakan.setEditable(false);
+		text_DendaSPTPDTunggakan.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		text_DendaSPTPDTunggakan.setBounds(287, 68, 175, 21);
+		
+		text_DendaTotal = new Text(grpRealisasiSptpd, SWT.BORDER);
+		text_DendaTotal.setEditable(false);
+		text_DendaTotal.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		text_DendaTotal.setBounds(287, 92, 175, 21);
+		
+		text_TotalSPTPDBerjalan = new Text(grpRealisasiSptpd, SWT.BORDER);
+		text_TotalSPTPDBerjalan.setEditable(false);
+		text_TotalSPTPDBerjalan.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		text_TotalSPTPDBerjalan.setBounds(468, 44, 186, 21);
+		
+		text_TotalSPTPDTunggakan = new Text(grpRealisasiSptpd, SWT.BORDER);
+		text_TotalSPTPDTunggakan.setEditable(false);
+		text_TotalSPTPDTunggakan.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		text_TotalSPTPDTunggakan.setBounds(468, 68, 186, 21);
+		
+		text_TotalAll = new Text(grpRealisasiSptpd, SWT.BORDER);
+		text_TotalAll.setEditable(false);
+		text_TotalAll.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		text_TotalAll.setBounds(468, 92, 186, 21);
+		
+		lblDenda = new Label(grpRealisasiSptpd, SWT.NONE);
+		lblDenda.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblDenda.setText("Denda");
+		lblDenda.setBounds(287, 23, 82, 15);
+		
+		lblTotal_1 = new Label(grpRealisasiSptpd, SWT.NONE);
+		lblTotal_1.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblTotal_1.setText("Total");
+		lblTotal_1.setBounds(468, 23, 82, 15);
+		
+		lblTunggakanBelumBayar = new Label(grpRealisasiSptpd, SWT.NONE);
+		lblTunggakanBelumBayar.setText("Tunggakan Belum Bayar");
+		lblTunggakanBelumBayar.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		lblTunggakanBelumBayar.setBounds(10, 121, 136, 15);
+		
+		text = new Text(grpRealisasiSptpd, SWT.BORDER);
+		text.setEditable(false);
+		text.setBackground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
+		text.setBounds(152, 119, 217, 44);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		
+		Label label = new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
 		new Label(comp, SWT.NONE);
 		
 		chkInsidentil = new Button(comp, SWT.CHECK);
@@ -298,6 +400,15 @@ public class DaftarSPTPDView extends ViewPart {
 		chkSSPD.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
 		chkSSPD.setText("Tampilkan SSPD");
 		chkSSPD.setFont(SWTResourceManager.getFont(Preferences.FONT_STYLE, Preferences.FONT_SIZE, SWT.NORMAL));
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
 		new Label(comp, SWT.NONE);
 		
 		btnNewButton = new Button(comp, SWT.NONE);
@@ -406,6 +517,15 @@ public class DaftarSPTPDView extends ViewPart {
 		btnCetak.setLayoutData(gd_btnCetak);
 		btnCetak.setText("Cetak");
 		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
 		
 		btnFix = new Button(comp, SWT.NONE);
 		btnFix.addSelectionListener(new SelectionAdapter() {
@@ -430,6 +550,26 @@ public class DaftarSPTPDView extends ViewPart {
 		btnFix.setLayoutData(gd_btnFix);
 		btnFix.setText("Fix");
 		btnFix.setVisible(false);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
+		new Label(comp, SWT.NONE);
 		new Label(comp, SWT.NONE);
 		new Label(comp, SWT.NONE);
 		new Label(comp, SWT.NONE);
@@ -655,6 +795,21 @@ public class DaftarSPTPDView extends ViewPart {
 	private DateTime calSampai;
 	private Button btnNewButton;
 	private Button btnFix;
+	private Group grpRealisasiSptpd;
+	private Label lblTotal;
+	private Text textPokokSPTPDberjalan;
+	private Text textPokokSPTPDTunggakan;
+	private Text textPokokTotal;
+	private Text text_DendaSPTPDBerjalan;
+	private Text text_DendaSPTPDTunggakan;
+	private Text text_DendaTotal;
+	private Text text_TotalSPTPDBerjalan;
+	private Text text_TotalSPTPDTunggakan;
+	private Text text_TotalAll;
+	private Label lblDenda;
+	private Label lblTotal_1;
+	private Label lblTunggakanBelumBayar;
+	private Text text;
 	
 	private boolean isPrint(){		
 		return userModul.getCetak();
